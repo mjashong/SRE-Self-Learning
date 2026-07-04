@@ -571,6 +571,77 @@ body.light .eli5-panel{background:linear-gradient(135deg,rgba(251,191,36,0.08),r
 .gl-chip-dot.python{background:var(--python)}
 .gl-chip-dot.observability{background:var(--observability)}
 .gl-chip-dot.sre{background:var(--sre)}
+/* Cheatsheets view */
+.gl-wrap.cs-wrap{max-width:min(1400px,95vw)}
+.cs-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem;align-items:start;margin-top:1.4rem}
+@media(max-width:980px){.cs-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.cs-grid{grid-template-columns:1fr}}
+.cs-card{background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:1.35rem 1.5rem}
+.cs-card-head{font-size:.98rem;font-weight:800;margin-bottom:1rem;padding-bottom:.7rem;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.5rem}
+.cs-row{display:grid;grid-template-columns:1fr;gap:.28rem;padding:.68rem 0;border-bottom:1px solid var(--border)}
+.cs-row:last-child{border-bottom:none;padding-bottom:0}
+.cs-cmd{font-family:'SF Mono',Menlo,Consolas,'Liberation Mono',monospace;font-size:.8rem;color:var(--accent);line-height:1.55;word-break:break-word}
+.cs-desc{font-size:.78rem;color:var(--muted);line-height:1.55}
+.cs-hl{background:rgba(99,102,241,.25);color:var(--text);border-radius:3px;padding:0 .1rem}
+.cs-empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:2.5rem 1rem;font-size:.92rem}
+.cs-manifests{margin-top:1.9rem;background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:1.1rem 1.25rem}
+.cs-manifests-head{font-size:1.05rem;font-weight:800;display:flex;align-items:center;gap:.5rem;margin-bottom:.9rem}
+.cs-manifests-hint{font-size:.64rem;font-weight:700;color:var(--accent);background:rgba(99,102,241,.12);padding:.08rem .5rem;border-radius:100px}
+.cs-mtabs{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.85rem}
+.cs-mtab{font-size:.72rem;font-weight:700;padding:.35rem .75rem;border-radius:100px;border:1.5px solid var(--border);background:var(--bg);color:var(--muted);cursor:pointer;font-family:'Sora',sans-serif;transition:all .15s}
+.cs-mtab:hover{border-color:var(--accent);color:var(--text)}
+.cs-mtab.active{background:var(--accent);border-color:var(--accent);color:#fff}
+.cs-mpane-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:.5rem}
+.cs-mpane-desc{font-size:.8rem;color:var(--muted);line-height:1.4}
+.cs-mcopy{font-size:.68rem;font-weight:700;padding:.32rem .65rem;border-radius:7px;border:1px solid var(--border2);background:var(--bg3);color:var(--muted);cursor:pointer;font-family:'Sora',sans-serif;flex-shrink:0;transition:all .15s;white-space:nowrap}
+.cs-mcopy:hover{color:var(--accent);border-color:var(--accent)}
+.cs-yaml{background:var(--code-bg);border:1px solid var(--border);border-radius:9px;padding:.85rem .95rem;font-family:'JetBrains Mono','SF Mono',Menlo,Consolas,monospace;font-size:.72rem;line-height:1.55;color:var(--code-text);overflow-x:auto;white-space:pre;margin:0}
+.cs-yaml .cs-hl{color:inherit;background:rgba(99,102,241,.4)}
+.cs-row-more{cursor:pointer;border-radius:7px;transition:background .15s}
+.cs-row-more:hover{background:var(--bg3)}
+.cs-more-tag{font-family:'Sora',sans-serif;font-size:.62rem;font-weight:700;color:var(--accent);background:rgba(99,102,241,.13);padding:.05rem .42rem;border-radius:100px;vertical-align:middle;white-space:nowrap}
+/* HTTP status code modal */
+.http-overlay{position:fixed;inset:0;background:rgba(0,0,0,.62);backdrop-filter:blur(3px);z-index:600;display:flex;align-items:flex-start;justify-content:center;padding:5vh 1rem;overflow-y:auto;animation:httpFade .15s ease}
+@keyframes httpFade{from{opacity:0}to{opacity:1}}
+.http-modal{background:var(--bg2);border:1px solid var(--border2);border-radius:18px;width:100%;max-width:900px;box-shadow:0 24px 80px rgba(0,0,0,.55);overflow:hidden;animation:httpPop .18s ease}
+@keyframes httpPop{from{transform:translateY(10px) scale(.985);opacity:.6}to{transform:none;opacity:1}}
+.http-head{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;padding:1.15rem 1.4rem;border-bottom:1px solid var(--border)}
+.http-title{font-size:1.3rem;font-weight:800;letter-spacing:-.01em}
+.http-sub{font-size:.76rem;color:var(--muted);margin-top:.2rem}
+.http-close{background:var(--bg3);border:1px solid var(--border2);color:var(--muted);width:32px;height:32px;border-radius:8px;cursor:pointer;font-size:.85rem;flex-shrink:0;transition:all .15s}
+.http-close:hover{color:var(--text);border-color:var(--accent)}
+.http-search-wrap{padding:1rem 1.4rem 0}
+.http-search{width:100%;background:var(--bg3);border:1.5px solid var(--border);border-radius:10px;padding:.65rem .9rem;font-family:'Sora',sans-serif;font-size:.92rem;color:var(--text);transition:border-color .2s}
+.http-search:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(99,102,241,.12)}
+.http-body{padding:.6rem 1.4rem 1.4rem;max-height:64vh;overflow-y:auto}
+.http-class{margin-top:1.2rem;border-left:3px solid var(--border);padding-left:.9rem}
+.http-class.c1{border-color:#8892a4}.http-class.c2{border-color:#10b981}.http-class.c3{border-color:#3b82f6}.http-class.c4{border-color:#f59e0b}.http-class.c5{border-color:#ef4444}
+.http-class-head{font-size:.84rem;margin-bottom:.65rem;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+.http-class-name{font-weight:800}
+.http-class-meaning{color:var(--muted);font-weight:500}
+.http-class-badge{font-family:'JetBrains Mono',monospace;font-weight:800;font-size:.74rem;padding:.12rem .5rem;border-radius:6px;color:#fff}
+.http-class.c1 .http-class-badge{background:#8892a4}.http-class.c2 .http-class-badge{background:#10b981}.http-class.c3 .http-class-badge{background:#3b82f6}.http-class.c4 .http-class-badge{background:#f59e0b}.http-class.c5 .http-class-badge{background:#ef4444}
+.http-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:.5rem}
+.http-code{display:flex;gap:.6rem;align-items:flex-start;background:var(--bg3);border:1px solid var(--border);border-radius:9px;padding:.5rem .65rem}
+.http-num{font-family:'JetBrains Mono',monospace;font-weight:800;font-size:.98rem;flex-shrink:0;line-height:1.3}
+.http-class.c1 .http-num{color:#8892a4}.http-class.c2 .http-num{color:#10b981}.http-class.c3 .http-num{color:#3b82f6}.http-class.c4 .http-num{color:#f59e0b}.http-class.c5 .http-num{color:#ef4444}
+.http-meta{display:flex;flex-direction:column;min-width:0}
+.http-name{font-size:.78rem;font-weight:700;line-height:1.25}
+.http-desc{font-size:.7rem;color:var(--muted);line-height:1.35;margin-top:.12rem}
+.http-empty{text-align:center;color:var(--muted);padding:2rem 1rem;font-size:.9rem}
+/* Python data-type methods modal (reuses .http-overlay / .http-modal) */
+.pyt-tabs{display:flex;flex-wrap:wrap;gap:.5rem;padding:1.1rem 1.4rem 0}
+.pyt-tab{font-size:.8rem;font-weight:700;padding:.4rem .95rem;border-radius:100px;border:1.5px solid var(--border);background:var(--bg3);color:var(--muted);cursor:pointer;font-family:'JetBrains Mono','SF Mono',Menlo,monospace;transition:all .15s}
+.pyt-tab:hover{color:var(--text);border-color:var(--accent)}
+.pyt-tab.active{color:#fff;border-color:transparent}
+.pyt-tab.t-list.active{background:#3b82f6}.pyt-tab.t-dict.active{background:#8b5cf6}.pyt-tab.t-set.active{background:#10b981}.pyt-tab.t-tuple.active{background:#f59e0b}
+.pyt-tagline{font-size:.82rem;color:var(--muted);margin-bottom:.95rem}
+.pyt-tagline b{color:var(--text);font-family:'JetBrains Mono','SF Mono',Menlo,monospace}
+.pyt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:.55rem}
+.pyt-method{background:var(--bg3);border:1px solid var(--border);border-left:3px solid var(--border);border-radius:9px;padding:.55rem .8rem}
+.pyt-body.t-list .pyt-method{border-left-color:#3b82f6}.pyt-body.t-dict .pyt-method{border-left-color:#8b5cf6}.pyt-body.t-set .pyt-method{border-left-color:#10b981}.pyt-body.t-tuple .pyt-method{border-left-color:#f59e0b}
+.pyt-syntax{font-family:'JetBrains Mono','SF Mono',Menlo,monospace;font-size:.78rem;font-weight:700;color:var(--text);display:block;word-break:break-word}
+.pyt-desc{font-size:.72rem;color:var(--muted);line-height:1.4;margin-top:.18rem;display:block}
 .gl-group{margin-bottom:2rem}
 .gl-group-head{display:flex;align-items:center;gap:.6rem;margin-bottom:.9rem;padding-bottom:.5rem;border-bottom:1px solid var(--border)}
 .gl-group-icon{width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
@@ -864,6 +935,7 @@ body.light .track-desc{color:var(--muted)}
       <button class="nav-btn" id="portfolioNavBtn" onclick="showView('portfolio')"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>Portfolio</button>
       <button class="nav-btn nav-btn-interview" id="interviewNavBtn" onclick="goInterviewTrack()"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M9.5 9a2.5 2.5 0 1 1 3 2.5c-.5.2-.5.7-.5 1"/><path d="M12 14.5v.01"/></svg>Interview Prep</button>
       <button class="nav-btn" id="masterNavBtn" onclick="showView('master')"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M7 6H4v2a3 3 0 0 0 3 3"/><path d="M17 6h3v2a3 3 0 0 1-3 3"/><path d="M12 14v3"/><path d="M9 21h6"/><path d="M10 17h4l-.5 4h-3z"/></svg>Master Challenge</button>
+      <button class="nav-btn" id="cheatsheetNavBtn" onclick="showView('cheatsheet')"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>Cheatsheets</button>
     </div>
     <div class="header-actions">
       <button class="pp-save-btn" onclick="openProgressPanel()" title="Progress & backup" aria-label="Progress & backup"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg></button>
@@ -4128,6 +4200,11 @@ function render(){
     if(glBtn) glBtn.classList.add('active');
   }
   else if(state.view==='master'){ renderMaster(); btns[5].classList.add('active'); }
+  else if(state.view==='cheatsheet'){
+    renderCheatsheet();
+    var csBtn = document.getElementById('cheatsheetNavBtn');
+    if(csBtn) csBtn.classList.add('active');
+  }
   else if(state.view==='lesson'){
     c.innerHTML=renderLesson();
     var lesson=TRACKS[state.currentTrack].lessons[state.currentLessonIdx];
@@ -4722,6 +4799,541 @@ function glSetTrack(tid){
   glState.track = tid;
   glState._focused = false;
   renderGlossary();
+}
+
+// ─── CHEATSHEETS VIEW ─────────────────────────────────────────────────────────
+// Quick interview-reference: key commands + concepts per track. Searchable + filterable.
+var CHEATSHEET = {
+  docker:[
+    {c:'docker build -t app:1.0 .', d:'Build an image from the Dockerfile in .'},
+    {c:'docker run -d -p 8080:80 app:1.0', d:'Run detached, publish host:container port'},
+    {c:'docker ps  /  docker ps -a', d:'Running containers / all (incl. stopped)'},
+    {c:'docker logs -f <id>', d:'Stream a container\'s output'},
+    {c:'docker exec -it <id> sh', d:'Open a shell inside a running container'},
+    {c:'docker images  /  docker rmi <img>', d:'List / remove local images'},
+    {c:'docker stop <id> && docker rm <id>', d:'Stop then remove a container'},
+    {c:'docker compose up -d  /  down', d:'Start / stop a multi-container stack'},
+    {c:'FROM · RUN · COPY · CMD', d:'Base image · build step · copy files · start command'},
+    {c:'Layer caching', d:'Order cheap→expensive; COPY deps + install BEFORE source'},
+    {c:'Image vs container', d:'Read-only blueprint vs running instance (class vs object)'},
+    {c:'Volume', d:'Persist data outside the container\'s lifecycle'}
+  ],
+  k8s:[
+    {g:'inspect', c:'kubectl get pods', d:'List pods in the current namespace'},
+    {g:'inspect', c:'kubectl get pods -A', d:'Across all namespaces'},
+    {g:'inspect', c:'kubectl get pods -o wide', d:'Add NODE + IP columns'},
+    {g:'inspect', c:'kubectl get pods -l app=web', d:'Filter by label'},
+    {g:'inspect', c:'kubectl get deploy,svc,nodes', d:'Multiple resource types at once'},
+    {g:'inspect', c:'kubectl describe pod <p>', d:'Full detail + Events (debugging gold)'},
+    {g:'inspect', c:'kubectl logs <p> [--previous]', d:'Logs; --previous = the crashed prior run'},
+    {g:'inspect', c:'kubectl logs <p> -c <ctr>', d:'Logs from a specific container in the pod'},
+    {g:'inspect', c:'kubectl get events --sort-by=.lastTimestamp', d:'Recent cluster events'},
+    {g:'inspect', c:'kubectl get endpoints <svc>', d:'Which pods a Service routes to'},
+    {g:'operate', c:'kubectl scale deploy <d> --replicas=N', d:'Change the replica count'},
+    {g:'operate', c:'kubectl set image deploy/<d> c=img:tag', d:'Rolling update to a new image'},
+    {g:'operate', c:'kubectl rollout status deploy/<d>', d:'Watch a rollout'},
+    {g:'operate', c:'kubectl rollout undo deploy/<d>', d:'Roll back to the previous version'},
+    {g:'operate', c:'kubectl rollout restart deploy/<d>', d:'Recreate pods (e.g. pick up new config)'},
+    {g:'operate', c:'kubectl expose deploy <d> --port=80', d:'Create a Service for a deployment'},
+    {g:'operate', c:'kubectl exec -it <p> -- sh', d:'Shell into a container'},
+    {g:'operate', c:'kubectl port-forward <p> 8080:80', d:'Reach a pod from localhost'},
+    {g:'operate', c:'kubectl apply -f file.yaml', d:'Declarative create / update from a manifest'},
+    {g:'operate', c:'kubectl delete pod <name>', d:'Delete a pod (its controller recreates it)'},
+    {g:'concepts', c:'Pod', d:'Smallest unit; 1+ containers sharing network + storage'},
+    {g:'concepts', c:'Deployment → ReplicaSet → Pods', d:'Keeps desired replica count; enables rollouts'},
+    {g:'concepts', c:'Service types', d:'ClusterIP (internal), NodePort, LoadBalancer'},
+    {g:'concepts', c:'Probes', d:'readiness = gate traffic; liveness = restart container'},
+    {g:'concepts', c:'CrashLoopBackOff / ImagePullBackOff / Pending', d:'app crash / bad image / unschedulable'}
+  ],
+  git:[
+    {c:'git status  /  git add -p', d:'See state / stage changes hunk by hunk'},
+    {c:'git commit -m "msg"', d:'Record a snapshot of staged changes'},
+    {c:'git switch -c <branch>', d:'Create and switch to a new branch'},
+    {c:'git merge <b>  vs  git rebase <b>', d:'Combine (keeps history) vs replay (linear)'},
+    {c:'git pull --rebase  /  git push', d:'Sync down (linear) / publish commits'},
+    {c:'git log --oneline --graph', d:'Compact, visual history'},
+    {c:'git stash  /  git stash pop', d:'Shelve work, then restore it'},
+    {c:'git reset --soft | --mixed | --hard', d:'Move HEAD: keep staged / unstage / discard'},
+    {c:'git revert <commit>', d:'Safely undo a commit with a new commit'},
+    {c:'git cherry-pick <commit>', d:'Apply one commit onto the current branch'},
+    {c:'HEAD · origin · upstream', d:'Current ref · default remote · tracked remote'},
+    {c:'git diff  /  git diff --staged', d:'Unstaged vs staged changes'}
+  ],
+  tf:[
+    {c:'terraform init', d:'Download providers, set up the backend'},
+    {c:'terraform plan', d:'Preview the diff — changes nothing'},
+    {c:'terraform apply', d:'Make real infrastructure match the code'},
+    {c:'terraform destroy', d:'Tear down everything it manages'},
+    {c:'terraform fmt  /  validate', d:'Format / check config syntax'},
+    {c:'terraform state list  /  show', d:'Inspect tracked resources'},
+    {c:'terraform import <addr> <id>', d:'Adopt an existing resource into state'},
+    {c:'Plan symbols: + ~ -/+ -', d:'create · change · replace · destroy (watch -/+)'},
+    {c:'Blocks', d:'provider · resource · variable · output · module'},
+    {c:'State', d:'Source of truth; store remote + lock (S3 + DynamoDB)'},
+    {c:'Variable vs output', d:'Input you pass in vs value Terraform returns'},
+    {c:'Module', d:'Reusable, parameterized group of resources'}
+  ],
+  linux:[
+    {c:'ls -la · cd · pwd', d:'List (incl. hidden) · navigate · where am I'},
+    {c:'grep -ri "text" .', d:'Recursive, case-insensitive search'},
+    {c:'find . -name "*.log"', d:'Find files by pattern'},
+    {c:'ps aux  /  top  /  htop', d:'Inspect processes / live resource use'},
+    {c:'df -h  /  du -sh *', d:'Disk free / size of things here'},
+    {c:'chmod +x f  /  chown user:grp f', d:'Permissions / ownership'},
+    {c:'tail -f /var/log/app.log', d:'Follow a log as it grows'},
+    {c:'ssh user@host  /  scp f host:', d:'Remote shell / copy files'},
+    {c:'systemctl status|restart <svc>', d:'Inspect / control services'},
+    {c:'kill <pid>  /  kill -9 <pid>', d:'Graceful / forced terminate'},
+    {c:'|  ·  >  ·  >>  ·  &&', d:'Pipe · redirect · append · run-if-success'},
+    {c:'awk · sed · cut · sort | uniq -c', d:'Field extract · edit · slice · tally'}
+  ],
+  networking:[
+    {c:'OSI / TCP-IP layers', d:'L3 IP · L4 TCP/UDP · L7 HTTP'},
+    {c:'TCP vs UDP', d:'Reliable + ordered vs fast + lossy'},
+    {c:'DNS', d:'Name → IP; A, CNAME records; resolver flow'},
+    {c:'HTTP status codes', d:'2xx ok · 3xx redirect · 4xx client · 5xx server', more:'http'},
+    {c:'curl -v  /  dig  /  nslookup', d:'Inspect a request / DNS lookups'},
+    {c:'ping · traceroute · mtr', d:'Reachability · the path to a host'},
+    {c:'ss -tulpn  /  netstat -tulpn', d:'Which ports are listening'},
+    {c:'CIDR / subnet', d:'/24 = 256 IPs; private ranges (10./172.16./192.168.)'},
+    {c:'Load balancer', d:'L4 (TCP) vs L7 (HTTP); round-robin, health checks'},
+    {c:'TLS handshake', d:'Cert + SNI on 443; encrypts the connection'},
+    {c:'Common ports', d:'22 ssh · 53 dns · 80 http · 443 https'},
+    {c:'Firewall / security group', d:'Allow/deny rules by port + source'}
+  ],
+  python:[
+    {c:'with open(p) as f: for line in f:', d:'Stream a file line by line, safely'},
+    {c:'line.strip().split()', d:'Trim whitespace, tokenize on spaces'},
+    {c:'d[k] = d.get(k, 0) + 1', d:'Count into a dict (or use collections.Counter)'},
+    {c:'set(items) ; len(s)', d:'Unique values + their count'},
+    {c:'[x for x in xs if cond]', d:'Filter / transform in one expression'},
+    {c:'json.loads(s)  /  json.dumps(o)', d:'JSON text ↔ Python objects'},
+    {c:'requests.get(url, timeout=5)', d:'Call an API — always set a timeout'},
+    {c:'try / except + backoff', d:'Retry transient failures (with growing delay)'},
+    {c:'subprocess.run([...], capture_output=True)', d:'Shell out and capture stdout/stderr'},
+    {c:'f"{value:.2f}"', d:'Format numbers / strings inline'},
+    {c:'datetime · time', d:'Timestamps, durations, sleeps'},
+    {c:'dict · list · set · tuple', d:'Core data structures to reach for', more:'pytypes'}
+  ],
+  observability:[
+    {c:'Three pillars', d:'Metrics (trends) · Logs (events) · Traces (request path)'},
+    {c:'Four Golden Signals', d:'Latency · Traffic · Errors · Saturation'},
+    {c:'SLI / SLO / SLA', d:'Indicator · internal target · external contract'},
+    {c:'Error budget', d:'100% − SLO; the unreliability you can spend'},
+    {c:'Prometheus', d:'Pull-based metrics; queried with PromQL'},
+    {c:'rate(http_requests_total[5m])', d:'Per-second rate over a 5-min window'},
+    {c:'histogram_quantile(0.99, ...)', d:'p99 latency from a histogram'},
+    {c:'Grafana', d:'Dashboards + visualization over metrics'},
+    {c:'Alerting', d:'Alert on symptoms / SLO burn, not every blip'},
+    {c:'Percentiles > averages', d:'p95/p99 reveal tail pain averages hide'},
+    {c:'Cardinality', d:'Avoid high-cardinality labels (user id, etc.)'},
+    {c:'RED / USE methods', d:'Rate-Errors-Duration / Utilization-Saturation-Errors'}
+  ],
+  sre:[
+    {c:'SLI / SLO / SLA + error budget', d:'Define and measure reliability targets'},
+    {c:'Toil', d:'Manual, repetitive, automatable work — keep ≤ ~50%'},
+    {c:'Four Golden Signals', d:'Latency · Traffic · Errors · Saturation'},
+    {c:'Incident flow', d:'Detect → Triage → Mitigate → Resolve → Postmortem'},
+    {c:'Mitigate before root-cause', d:'Stop user pain first (e.g. roll back), then investigate'},
+    {c:'Blameless postmortem', d:'Fix systems and processes, not people'},
+    {c:'Error-budget policy', d:'Budget burned → slow risky launches, prioritize reliability'},
+    {c:'Resilience patterns', d:'Timeout + retry/backoff + circuit breaker + idempotency'},
+    {c:'Graceful degradation', d:'Shed load / serve reduced experience under stress'},
+    {c:'The nines', d:'99.9% ≈ 43 min/mo · 99.99% ≈ 4.3 min/mo down'},
+    {c:'Availability', d:'uptime / total time — measure against the SLO'},
+    {c:'On-call', d:'Sustainable rotations backed by runbooks'}
+  ]
+};
+
+// Kubernetes example manifests — the YAML you should be able to recall / read in an interview
+var K8S_MANIFESTS = [
+  { title:'Pod', desc:'The smallest unit — one or more containers.', yaml:[
+    'apiVersion: v1','kind: Pod','metadata:','  name: nginx','  labels:','    app: web',
+    'spec:','  containers:','    - name: nginx','      image: nginx:1.27','      ports:','        - containerPort: 80'].join('\n') },
+  { title:'Deployment', desc:'Manages a ReplicaSet of identical pods; enables rollouts.', yaml:[
+    'apiVersion: apps/v1','kind: Deployment','metadata:','  name: web','spec:','  replicas: 3',
+    '  selector:','    matchLabels:','      app: web','  template:','    metadata:','      labels:','        app: web',
+    '    spec:','      containers:','        - name: nginx','          image: nginx:1.27','          ports:','            - containerPort: 80',
+    '          resources:','            requests: { cpu: 100m, memory: 128Mi }','            limits:   { cpu: 500m, memory: 256Mi }'].join('\n') },
+  { title:'Service (ClusterIP)', desc:'Stable internal address; load-balances to matching pods.', yaml:[
+    'apiVersion: v1','kind: Service','metadata:','  name: web','spec:','  type: ClusterIP',
+    '  selector:','    app: web','  ports:','    - port: 80','      targetPort: 80'].join('\n') },
+  { title:'Service (LoadBalancer)', desc:'Exposes pods externally via a cloud load balancer.', yaml:[
+    'apiVersion: v1','kind: Service','metadata:','  name: web-lb','spec:','  type: LoadBalancer',
+    '  selector:','    app: web','  ports:','    - port: 80','      targetPort: 8080'].join('\n') },
+  { title:'Ingress', desc:'L7 routing rules (host/path) to Services — needs an Ingress Controller.', yaml:[
+    'apiVersion: networking.k8s.io/v1','kind: Ingress','metadata:','  name: web','spec:','  rules:',
+    '    - host: example.com','      http:','        paths:','          - path: /','            pathType: Prefix',
+    '            backend:','              service:','                name: web','                port:','                  number: 80'].join('\n') },
+  { title:'ConfigMap', desc:'Non-sensitive config injected as env vars or files.', yaml:[
+    'apiVersion: v1','kind: ConfigMap','metadata:','  name: app-config','data:',
+    '  LOG_LEVEL: "info"','  MAX_CONN: "100"','  TIMEOUT_SECONDS: "30"'].join('\n') },
+  { title:'Secret', desc:'Sensitive values (base64 at rest) — use stringData to write plain text.', yaml:[
+    'apiVersion: v1','kind: Secret','metadata:','  name: db-creds','type: Opaque','stringData:',
+    '  username: admin','  password: s3cr3t'].join('\n') },
+  { title:'PersistentVolumeClaim', desc:'Requests durable storage for a stateful pod.', yaml:[
+    'apiVersion: v1','kind: PersistentVolumeClaim','metadata:','  name: data','spec:','  accessModes:',
+    '    - ReadWriteOnce','  resources:','    requests:','      storage: 5Gi'].join('\n') },
+  { title:'HorizontalPodAutoscaler', desc:'Auto-scales a Deployment on CPU (needs metrics-server + requests).', yaml:[
+    'apiVersion: autoscaling/v2','kind: HorizontalPodAutoscaler','metadata:','  name: web','spec:',
+    '  scaleTargetRef:','    apiVersion: apps/v1','    kind: Deployment','    name: web','  minReplicas: 2','  maxReplicas: 10',
+    '  metrics:','    - type: Resource','      resource:','        name: cpu','        target:','          type: Utilization','          averageUtilization: 70'].join('\n') },
+  { title:'CronJob', desc:'Runs a Job on a schedule (cron syntax).', yaml:[
+    'apiVersion: batch/v1','kind: CronJob','metadata:','  name: report','spec:','  schedule: "0 2 * * *"',
+    '  jobTemplate:','    spec:','      template:','        spec:','          restartPolicy: OnFailure','          containers:',
+    '            - name: report','              image: acme/report:1.0'].join('\n') }
+];
+
+// Full HTTP status code reference, grouped by class — opened from the Networking cheatsheet row.
+var HTTP_STATUS = [
+  { cls:'c1', code:'1xx', name:'Informational', meaning:'request received, still processing', codes:[
+    ["100","Continue","Headers OK — go ahead and send the body"],
+    ["101","Switching Protocols","Switching protocol (e.g. to WebSocket)"],
+    ["102","Processing","Still working on it (WebDAV)"],
+    ["103","Early Hints","Preload hints before the final response"] ]},
+  { cls:'c2', code:'2xx', name:'Success', meaning:'the request succeeded', codes:[
+    ["200","OK","Standard success"],
+    ["201","Created","A new resource was created"],
+    ["202","Accepted","Accepted; processing asynchronously"],
+    ["203","Non-Authoritative Info","Returned from a transformed copy"],
+    ["204","No Content","Success, nothing to return"],
+    ["205","Reset Content","Success; reset the form/view"],
+    ["206","Partial Content","Range delivered (resumable downloads)"],
+    ["207","Multi-Status","Multiple statuses at once (WebDAV)"],
+    ["208","Already Reported","Already enumerated (WebDAV)"],
+    ["226","IM Used","Result of a delta encoding"] ]},
+  { cls:'c3', code:'3xx', name:'Redirection', meaning:'follow the Location / use the cache', codes:[
+    ["300","Multiple Choices","Several options to choose from"],
+    ["301","Moved Permanently","Use the new URL from now on"],
+    ["302","Found","Temporary redirect (legacy)"],
+    ["303","See Other","GET the resource at another URL"],
+    ["304","Not Modified","Use your cached copy"],
+    ["305","Use Proxy","Access via a proxy (deprecated)"],
+    ["307","Temporary Redirect","Temporary; keep the same method"],
+    ["308","Permanent Redirect","Permanent; keep the same method"] ]},
+  { cls:'c4', code:'4xx', name:'Client Error', meaning:'the request was wrong', codes:[
+    ["400","Bad Request","Malformed or invalid request"],
+    ["401","Unauthorized","Authentication required or failed"],
+    ["402","Payment Required","Reserved for paid/future use"],
+    ["403","Forbidden","Authenticated, but not allowed"],
+    ["404","Not Found","No such resource"],
+    ["405","Method Not Allowed","Verb not supported on this resource"],
+    ["406","Not Acceptable","Can't satisfy the Accept headers"],
+    ["407","Proxy Auth Required","Authenticate with the proxy first"],
+    ["408","Request Timeout","Client took too long to send"],
+    ["409","Conflict","State conflict (e.g. edit collision)"],
+    ["410","Gone","Resource permanently removed"],
+    ["411","Length Required","Content-Length header missing"],
+    ["412","Precondition Failed","A precondition header failed"],
+    ["413","Payload Too Large","Request body too big"],
+    ["414","URI Too Long","The URL is too long"],
+    ["415","Unsupported Media Type","Body format not supported"],
+    ["416","Range Not Satisfiable","Requested range is invalid"],
+    ["417","Expectation Failed","Can't meet the Expect header"],
+    ["418","I'm a teapot","Joke status (RFC 2324)"],
+    ["421","Misdirected Request","Sent to the wrong server"],
+    ["422","Unprocessable Entity","Valid syntax, failed validation"],
+    ["423","Locked","Resource is locked (WebDAV)"],
+    ["424","Failed Dependency","A dependent request failed"],
+    ["425","Too Early","Replay risk — retry later"],
+    ["426","Upgrade Required","Client must upgrade protocol"],
+    ["428","Precondition Required","Must send a precondition (avoid lost updates)"],
+    ["429","Too Many Requests","Rate limited — slow down"],
+    ["431","Header Fields Too Large","Request headers too big"],
+    ["451","Unavailable For Legal Reasons","Blocked for legal reasons"] ]},
+  { cls:'c5', code:'5xx', name:'Server Error', meaning:'the server failed', codes:[
+    ["500","Internal Server Error","Generic server-side failure"],
+    ["501","Not Implemented","Server doesn't support this"],
+    ["502","Bad Gateway","Bad response from an upstream server"],
+    ["503","Service Unavailable","Overloaded or down for maintenance"],
+    ["504","Gateway Timeout","An upstream server timed out"],
+    ["505","HTTP Version Not Supported","HTTP version not supported"],
+    ["506","Variant Also Negotiates","Content-negotiation config error"],
+    ["507","Insufficient Storage","Server out of storage (WebDAV)"],
+    ["508","Loop Detected","Infinite loop detected (WebDAV)"],
+    ["510","Not Extended","Further extensions are required"],
+    ["511","Network Auth Required","Must authenticate to the network (captive portal)"] ]}
+];
+
+// Optional sub-section labels — a track whose rows carry a `g` key renders one card per section.
+var CHEAT_SECTIONS = { inspect:'kubectl — inspect', operate:'kubectl — operate', concepts:'Kubernetes — core concepts' };
+
+// Python data-type method reference — opened from the "dict · list · set · tuple" cheatsheet row.
+var PY_TYPES = [
+  { key:'list', name:'list', tagline:'ordered, mutable — duplicates allowed', methods:[
+    ["lst.append(x)","Add an item to the end"],
+    ["lst.extend(other)","Append all items from another iterable"],
+    ["lst.insert(i, x)","Insert x at index i"],
+    ["lst.pop()  ·  lst.pop(i)","Remove + return the last item (or index i)"],
+    ["lst.remove(x)","Remove the first matching value"],
+    ["lst.index(x)","Index of the first match (raises if absent)"],
+    ["lst.count(x)","How many times x appears"],
+    ["lst.sort()  ·  sorted(lst)","Sort in place  ·  return a new sorted list"],
+    ["lst.reverse()  ·  lst[::-1]","Reverse in place  ·  reversed copy"],
+    ["lst[1:3]  ·  len(lst)","Slice  ·  length (built-ins)"] ]},
+  { key:'dict', name:'dict', tagline:'key → value pairs, mutable', methods:[
+    ["d.get(k, default)","Value or default — never KeyError"],
+    ["d.setdefault(k, [])","Get, inserting a default if missing"],
+    ["d.keys() · d.values() · d.items()","Iterable views of the dict"],
+    ["d.update(other)","Merge another dict in"],
+    ["d.pop(k, None)","Remove + return a key"],
+    ["d.popitem()","Remove + return the last pair"],
+    ["d.copy()","Shallow copy"],
+    ["d.clear()","Remove all pairs"],
+    ["k in d","Key membership test (built-in)"] ]},
+  { key:'set', name:'set', tagline:'unique, unordered, mutable', methods:[
+    ["s.add(x)","Add an element"],
+    ["s.discard(x)","Remove if present (no error)"],
+    ["s.remove(x)","Remove (KeyError if absent)"],
+    ["s.pop()","Remove + return an arbitrary element"],
+    ["a | b  ·  a.union(b)","Union — in either set"],
+    ["a & b  ·  a.intersection(b)","Intersection — in both"],
+    ["a - b  ·  a.difference(b)","Difference — in a but not b"],
+    ["a ^ b","Symmetric difference — in one, not both"],
+    ["a <= b  ·  a.issubset(b)","Is a contained in b"],
+    ["x in s","Fast membership test"] ]},
+  { key:'tuple', name:'tuple', tagline:'ordered, immutable — safe as a dict key', methods:[
+    ["t.count(x)","How many times x appears"],
+    ["t.index(x)","Index of the first match"],
+    ["a, b = t","Unpack into variables"],
+    ["t + t2","Concatenate into a new tuple"],
+    ["t[0]  ·  t[1:]  ·  len(t)","Index · slice · length (built-ins)"],
+    ["(immutable)","Cannot change after creation — hashable, usable as a dict/set key"] ]}
+];
+var pyTypeSel = 'list';
+
+var csState = { query: '', track: 'all', _focused: false };
+
+function csHighlight(escaped, escQ){
+  if(!escQ) return escaped;
+  var re = new RegExp('(' + escQ.replace(/[.*+?^${}()|[\]\\]/g,'\\$&') + ')', 'ig');
+  return escaped.replace(re, '<span class="cs-hl">$1</span>');
+}
+function csFilter(){
+  var trackOrder = ['docker','k8s','git','tf','linux','networking','python','observability','sre'];
+  var q = csState.query.trim().toLowerCase();
+  var groups = [], shown = 0, total = 0;
+  trackOrder.forEach(function(tid){
+    var rows = CHEATSHEET[tid] || [];
+    total += rows.length;
+    if(csState.track !== 'all' && csState.track !== tid) return;
+    var matched = rows.filter(function(r){ return !q || (r.c + ' ' + r.d).toLowerCase().indexOf(q) !== -1; });
+    if(matched.length){ groups.push({ tid: tid, rows: matched }); shown += matched.length; }
+  });
+  return { groups: groups, shown: shown, total: total };
+}
+function renderCheatsheetResults(){
+  var f = csFilter();
+  var q = csState.query.trim().toLowerCase();
+  var hlq = glEscapeHtml(csState.query.trim());
+  var grid = '';
+  if(f.groups.length){
+    function csRowHtml(r){
+      if(r.more){
+        return '<div class="cs-row cs-row-more" onclick="csRowMore(\'' + r.more + '\')" title="Click to see them all">'
+          + '<div class="cs-cmd">' + csHighlight(glEscapeHtml(r.c), hlq) + ' <span class="cs-more-tag">see all →</span></div>'
+          + '<div class="cs-desc">' + csHighlight(glEscapeHtml(r.d), hlq) + '</div></div>';
+      }
+      return '<div class="cs-row"><div class="cs-cmd">' + csHighlight(glEscapeHtml(r.c), hlq) + '</div><div class="cs-desc">' + csHighlight(glEscapeHtml(r.d), hlq) + '</div></div>';
+    }
+    function csCard(tid, headLabel, rows){
+      var card = '<div class="cs-card"><div class="cs-card-head"><span class="gl-chip-dot ' + tid + '"></span>' + headLabel + '</div>';
+      rows.forEach(function(r){ card += csRowHtml(r); });
+      return card + '</div>';
+    }
+    grid = '<div class="cs-grid">';
+    f.groups.forEach(function(g){
+      var sectioned = g.rows.some(function(r){ return r.g; });
+      if(sectioned){
+        // one card per section, in first-seen order
+        var order = [], byG = {};
+        g.rows.forEach(function(r){ var k = r.g || '_'; if(!byG[k]){ byG[k] = []; order.push(k); } byG[k].push(r); });
+        order.forEach(function(k){ grid += csCard(g.tid, CHEAT_SECTIONS[k] || GLOSSARY_TRACK_NAMES[g.tid], byG[k]); });
+      } else {
+        grid += csCard(g.tid, GLOSSARY_TRACK_NAMES[g.tid], g.rows);
+      }
+    });
+    grid += '</div>';
+  }
+  // Kubernetes example manifests — compact tabbed viewer (shown for "All tracks" or the Kubernetes filter)
+  var manifests = '';
+  if(csState.track === 'all' || csState.track === 'k8s'){
+    var mv = renderManifestViewer();
+    if(mv) manifests = '<div id="csManifestView">' + mv + '</div>';
+  }
+  if(!grid && !manifests) return '<div class="cs-empty">No matches for &ldquo;' + glEscapeHtml(csState.query) + '&rdquo;. Try a command, flag, or concept.</div>';
+  return grid + manifests;
+}
+function renderCheatsheet(){
+  var trackOrder = ['docker','k8s','git','tf','linux','networking','python','observability','sre'];
+  var f = csFilter();
+  var html = '<div class="gl-wrap cs-wrap">';
+  html += '<div class="gl-header"><div class="gl-title">Cheatsheets</div>';
+  html += '<div class="gl-sub">Fast, interview-ready reference for every track — key commands and concepts at a glance. Search across all of them, or filter to one track.</div></div>';
+  html += '<div class="gl-search-row"><div class="gl-search-box"><span class="gl-search-icon">🔍</span>';
+  html += '<input type="text" class="gl-search-input" id="csSearchInput" placeholder="Search commands &amp; concepts..." value="' + csState.query.replace(/"/g,'&quot;') + '" oninput="csOnSearch(this.value)" autocomplete="off">';
+  html += '<button class="gl-search-clear' + (csState.query ? ' show' : '') + '" id="csSearchClear" onclick="csClearSearch()" title="Clear">✕</button></div>';
+  html += '<span class="gl-count" id="csCount">' + f.shown + ' of ' + f.total + ' entries</span></div>';
+  html += '<div class="gl-filter-chips">';
+  html += '<button class="gl-chip' + (csState.track === 'all' ? ' active' : '') + '" onclick="csSetTrack(\'all\')">All tracks</button>';
+  trackOrder.forEach(function(tid){
+    html += '<button class="gl-chip' + (csState.track === tid ? ' active' : '') + '" onclick="csSetTrack(\'' + tid + '\')"><span class="gl-chip-dot ' + tid + '"></span>' + GLOSSARY_TRACK_NAMES[tid] + '</button>';
+  });
+  html += '</div>';
+  html += '<div id="csResults">' + renderCheatsheetResults() + '</div>';
+  html += '</div>';
+  var c = document.getElementById('view-container');
+  if(c) c.innerHTML = html;
+  var input = document.getElementById('csSearchInput');
+  if(input && csState._focused){ input.focus(); var len = input.value.length; input.setSelectionRange(len, len); }
+}
+function csOnSearch(val){
+  csState.query = val; csState._focused = true;
+  var f = csFilter();
+  var results = document.getElementById('csResults'); if(results) results.innerHTML = renderCheatsheetResults();
+  var count = document.getElementById('csCount'); if(count) count.textContent = f.shown + ' of ' + f.total + ' entries';
+  var clear = document.getElementById('csSearchClear'); if(clear){ if(val) clear.classList.add('show'); else clear.classList.remove('show'); }
+}
+function csClearSearch(){
+  csState.query = '';
+  var input = document.getElementById('csSearchInput');
+  if(input){ input.value = ''; input.focus(); }
+  csOnSearch('');
+}
+function csSetTrack(tid){ csState.track = tid; csState._focused = false; renderCheatsheet(); }
+
+// ── Kubernetes manifest viewer: pick a kind from the tab bar, see just that YAML ──
+var csManifestSel = 'Pod';
+function csManifestList(){
+  var q = csState.query.trim().toLowerCase();
+  return K8S_MANIFESTS.filter(function(m){ return !q || (m.title + ' ' + m.desc + ' ' + m.yaml).toLowerCase().indexOf(q) !== -1; });
+}
+function renderManifestViewer(){
+  var list = csManifestList();
+  if(!list.length) return '';
+  var sel = null;
+  for(var i=0;i<list.length;i++){ if(list[i].title === csManifestSel){ sel = list[i]; break; } }
+  if(!sel) sel = list[0];
+  var hlq = glEscapeHtml(csState.query.trim());
+  var encTitle = encodeURIComponent(sel.title);
+  var h = '<div class="cs-manifests"><div class="cs-manifests-head"><span class="gl-chip-dot k8s"></span>Kubernetes — example manifests <span class="cs-manifests-hint">click a kind</span></div>';
+  h += '<div class="cs-mtabs">';
+  list.forEach(function(m){
+    h += '<button class="cs-mtab' + (m.title === sel.title ? ' active' : '') + '" onclick="csSelectManifest(\'' + encodeURIComponent(m.title) + '\')">' + glEscapeHtml(m.title) + '</button>';
+  });
+  h += '</div>';
+  h += '<div class="cs-mpane-head"><span class="cs-mpane-desc">' + glEscapeHtml(sel.desc) + '</span>'
+     + '<button class="cs-mcopy" onclick="csCopyManifest(\'' + encTitle + '\', this)">⧉ Copy</button></div>';
+  h += '<pre class="cs-yaml">' + csHighlight(glEscapeHtml(sel.yaml), hlq) + '</pre>';
+  h += '</div>';
+  return h;
+}
+function csSelectManifest(t){
+  csManifestSel = decodeURIComponent(t);
+  var v = document.getElementById('csManifestView');
+  if(v) v.innerHTML = renderManifestViewer();
+}
+function csFallbackCopy(text){
+  try{ var ta = document.createElement('textarea'); ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0'; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); }catch(e){}
+}
+function csCopyManifest(t, btn){
+  t = decodeURIComponent(t);
+  var m = null; for(var i=0;i<K8S_MANIFESTS.length;i++){ if(K8S_MANIFESTS[i].title === t){ m = K8S_MANIFESTS[i]; break; } }
+  if(!m) return;
+  var done = function(){ if(btn){ var o = btn.textContent; btn.textContent = '✓ Copied'; setTimeout(function(){ btn.textContent = o; }, 1300); } };
+  if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(m.yaml).then(done, function(){ csFallbackCopy(m.yaml); done(); }); }
+  else { csFallbackCopy(m.yaml); done(); }
+}
+
+// A cheatsheet row can carry a `more` key that opens a richer reference panel.
+function csRowMore(type){ if(type === 'http') openHttpStatus(); else if(type === 'pytypes') openPyTypes(); }
+
+function pyTypesBodyHtml(){
+  var t = null; for(var i=0;i<PY_TYPES.length;i++){ if(PY_TYPES[i].key === pyTypeSel){ t = PY_TYPES[i]; break; } }
+  if(!t) t = PY_TYPES[0];
+  var h = '<div class="pyt-body t-' + t.key + '"><div class="pyt-tagline"><b>' + t.name + '</b> — ' + t.tagline + '</div><div class="pyt-grid">';
+  t.methods.forEach(function(m){
+    h += '<div class="pyt-method"><span class="pyt-syntax">' + glEscapeHtml(m[0]) + '</span><span class="pyt-desc">' + glEscapeHtml(m[1]) + '</span></div>';
+  });
+  return h + '</div></div>';
+}
+function pyTypesModalHtml(){
+  var h = '<div class="http-modal pyt-modal" onclick="event.stopPropagation()">';
+  h += '<div class="http-head"><div><div class="http-title">Python data-type methods</div>'
+     + '<div class="http-sub">Pick a type · Esc or click outside to close</div></div>'
+     + '<button class="http-close" onclick="closePyTypes()" title="Close">✕</button></div>';
+  h += '<div class="pyt-tabs">';
+  PY_TYPES.forEach(function(t){
+    h += '<button class="pyt-tab t-' + t.key + (t.key === pyTypeSel ? ' active' : '') + '" onclick="pyTypesSelect(\'' + t.key + '\')">' + t.name + '</button>';
+  });
+  h += '</div><div class="http-body" id="pytBody">' + pyTypesBodyHtml() + '</div></div>';
+  return h;
+}
+function pyTypesSelect(k){ pyTypeSel = k; var b = document.getElementById('pytBody'); if(b) b.innerHTML = pyTypesBodyHtml();
+  document.querySelectorAll('#pytOverlay .pyt-tab').forEach(function(btn){ btn.classList.toggle('active', btn.className.indexOf('t-' + k) !== -1); }); }
+function openPyTypes(){
+  closePyTypes();
+  var ov = document.createElement('div');
+  ov.id = 'pytOverlay'; ov.className = 'http-overlay';
+  ov.onclick = function(e){ if(e.target === ov) closePyTypes(); };
+  ov.innerHTML = pyTypesModalHtml();
+  document.body.appendChild(ov);
+  document.addEventListener('keydown', pyTypesEsc);
+}
+function closePyTypes(){ var el = document.getElementById('pytOverlay'); if(el) el.parentNode.removeChild(el); document.removeEventListener('keydown', pyTypesEsc); }
+function pyTypesEsc(e){ if(e.key === 'Escape') closePyTypes(); }
+
+function httpModalHtml(){
+  var total = 0; HTTP_STATUS.forEach(function(cl){ total += cl.codes.length; });
+  var h = '<div class="http-modal" onclick="event.stopPropagation()">';
+  h += '<div class="http-head"><div><div class="http-title">HTTP Status Codes</div>'
+     + '<div class="http-sub">' + total + ' codes across 5 classes · filter below · Esc or click outside to close</div></div>'
+     + '<button class="http-close" onclick="closeHttpStatus()" title="Close">✕</button></div>';
+  h += '<div class="http-search-wrap"><input class="http-search" id="httpFilter" placeholder="Filter by number or keyword — e.g. 404, timeout, redirect, rate" oninput="httpFilter(this.value)" autocomplete="off" spellcheck="false"></div>';
+  h += '<div class="http-body" id="httpBody">';
+  HTTP_STATUS.forEach(function(cl){
+    h += '<div class="http-class ' + cl.cls + '"><div class="http-class-head"><span class="http-class-badge">' + cl.code + '</span><span class="http-class-name">' + cl.name + '</span><span class="http-class-meaning">— ' + cl.meaning + '</span></div><div class="http-grid">';
+    cl.codes.forEach(function(s){
+      var key = (s[0] + ' ' + s[1] + ' ' + s[2] + ' ' + cl.name).toLowerCase().replace(/"/g,'');
+      h += '<div class="http-code" data-s="' + key + '"><span class="http-num">' + s[0] + '</span>'
+         + '<span class="http-meta"><span class="http-name">' + glEscapeHtml(s[1]) + '</span>'
+         + '<span class="http-desc">' + glEscapeHtml(s[2]) + '</span></span></div>';
+    });
+    h += '</div></div>';
+  });
+  h += '<div class="http-empty" id="httpEmpty" style="display:none">No status code matches that filter.</div>';
+  h += '</div></div>';
+  return h;
+}
+function openHttpStatus(){
+  closeHttpStatus();
+  var ov = document.createElement('div');
+  ov.id = 'httpOverlay'; ov.className = 'http-overlay';
+  ov.onclick = function(e){ if(e.target === ov) closeHttpStatus(); };
+  ov.innerHTML = httpModalHtml();
+  document.body.appendChild(ov);
+  document.addEventListener('keydown', httpEscClose);
+  setTimeout(function(){ var i = document.getElementById('httpFilter'); if(i) i.focus(); }, 30);
+}
+function closeHttpStatus(){
+  var el = document.getElementById('httpOverlay'); if(el) el.parentNode.removeChild(el);
+  document.removeEventListener('keydown', httpEscClose);
+}
+function httpEscClose(e){ if(e.key === 'Escape') closeHttpStatus(); }
+function httpFilter(val){
+  var q = (val || '').trim().toLowerCase();
+  var anyVisible = false;
+  document.querySelectorAll('#httpOverlay .http-class').forEach(function(sec){
+    var shown = 0;
+    sec.querySelectorAll('.http-code').forEach(function(it){
+      var match = !q || it.getAttribute('data-s').indexOf(q) !== -1;
+      it.style.display = match ? '' : 'none';
+      if(match) shown++;
+    });
+    sec.style.display = shown ? '' : 'none';
+    if(shown) anyVisible = true;
+  });
+  var empty = document.getElementById('httpEmpty'); if(empty) empty.style.display = anyVisible ? 'none' : 'block';
 }
 
 // ─── PROJECT WORKSHOP ENGINE ─────────────────────────────────────────────────

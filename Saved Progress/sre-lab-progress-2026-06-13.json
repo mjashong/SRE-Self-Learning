@@ -1,0 +1,91 @@
+{
+  "app": "sre-lab",
+  "version": 1,
+  "savedAt": "2026-06-13T23:57:23.455Z",
+  "lessonsDone": {
+    "k1": true,
+    "k2": true,
+    "k3": true,
+    "k4": true,
+    "k5": true,
+    "k6": true,
+    "k7": true,
+    "k8": true,
+    "o1": true,
+    "o2": true,
+    "o3": true,
+    "o4": true,
+    "o5": true,
+    "o6": true,
+    "o7": true,
+    "t1": true,
+    "t2": true,
+    "t3": true,
+    "t4": true,
+    "d1": true,
+    "d2": true,
+    "d3": true,
+    "d4": true,
+    "d5": true,
+    "tf1": true,
+    "tf2": true,
+    "tf3": true,
+    "tf4": true,
+    "tf5": true,
+    "py1": true,
+    "py3": true,
+    "s1": true,
+    "s2": true,
+    "s3": true,
+    "s4": true,
+    "s5": true,
+    "py2": true
+  },
+  "missionsDone": {},
+  "pyDone": {
+    "pe1": true,
+    "pe2": true,
+    "pe3": true,
+    "pe4": true,
+    "pe5": true
+  },
+  "planDone": {
+    "0": true,
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true
+  },
+  "quizScores": {
+    "k8s-core": {
+      "correct": 4,
+      "total": 4
+    },
+    "k8s-ops": {
+      "correct": 4,
+      "total": 4
+    },
+    "k8s-debug": {
+      "correct": 4,
+      "total": 4
+    },
+    "docker": {
+      "correct": 4,
+      "total": 4
+    },
+    "terraform": {
+      "correct": 4,
+      "total": 4
+    },
+    "python": {
+      "correct": 4,
+      "total": 4
+    },
+    "sre": {
+      "correct": 4,
+      "total": 4
+    }
+  },
+  "curLesson": "s5"
+}

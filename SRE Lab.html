@@ -163,7 +163,7 @@ svg{width:18px;height:18px;flex-shrink:0;vertical-align:middle}
 .callout.tip .callout-lbl{color:var(--ok)}
 .callout.warn .callout-lbl{color:var(--warn)}
 .callout.gotcha .callout-lbl{color:var(--wrong-c)}
-.diagram{background:var(--code-bg);border:1px solid var(--border);border-radius:10px;padding:1.25rem;margin:1.25rem 0;font-family:'JetBrains Mono',monospace;font-size:.74rem;line-height:1.5;color:var(--subtle);overflow-x:auto;white-space:pre}
+.diagram{background:var(--code-bg);border:1px solid var(--border);border-radius:10px;padding:1.25rem;margin:1.25rem 0;font-family:'JetBrains Mono',monospace;font-size:.74rem;line-height:1.5;color:#c9d4e6;overflow-x:auto;white-space:pre}
 .keypoints{background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:1rem 1.25rem;margin:1.25rem 0}
 .keypoints .callout-lbl{color:var(--accent)}
 .keypoints ul{margin:.5rem 0 0 1.1rem}
@@ -183,6 +183,23 @@ svg{width:18px;height:18px;flex-shrink:0;vertical-align:middle}
 .cq-opt .mk{width:20px;height:20px;border-radius:50%;border:1.5px solid var(--border2);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:.7rem}
 .cq-explain{margin-top:.5rem;padding:.85rem 1rem;border-radius:9px;background:var(--bg2);border:1px solid var(--border);font-size:.84rem;line-height:1.6;color:var(--subtle)}
 .cq-explain strong{color:var(--text)}
+.cq-opt.selected{border-color:var(--accent);background:rgba(99,102,241,.1)}
+.quiz-item .les-check{font-size:.72rem;font-weight:700}
+.quiz-score-badge{margin-left:auto;font-size:.66rem;font-weight:700;color:var(--muted);background:var(--bg4);border-radius:20px;padding:.05rem .5rem}
+.quiz-intro{font-size:.9rem;color:var(--subtle);line-height:1.65}
+.quizq .checkq-q{font-size:.92rem}
+.quiz-result{margin-top:1.4rem;padding:1rem 1.2rem;border-radius:11px;font-size:.92rem;line-height:1.5}
+.quiz-result.pass{background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.35);color:var(--ok)}
+.quiz-result.fail{background:var(--wrong-bg);border:1px solid var(--wrong-b);color:var(--wrong-c)}
+.quiz-result strong{font-size:1.15rem}
+.cq-why{margin-top:.5rem;padding:.7rem 1rem;border-radius:9px;background:var(--wrong-bg);border:1px solid var(--wrong-b);font-size:.83rem;line-height:1.55;color:var(--subtle)}
+.cq-why strong{color:var(--wrong-c)}
+.master-card{border-color:rgba(220,38,38,.35);background:linear-gradient(180deg,rgba(220,38,38,.07),transparent),var(--bg2)}
+.master-card .card-ico{box-shadow:0 4px 14px rgba(220,38,38,.3)}
+.master-card.locked{opacity:.78}
+.master-lock{text-align:center;padding:1.6rem 1rem;background:var(--bg3);border:1px solid var(--border);border-radius:14px;margin:1rem 0}
+.master-lock-ico{font-size:2rem;margin-bottom:.4rem}
+.master-lock p{font-size:.92rem;color:var(--subtle);line-height:1.6;margin:.5rem auto;max-width:460px}
 
 /* ── TERMINAL LAB ── */
 .lab-layout{display:grid;grid-template-columns:340px 1fr;gap:1.25rem;align-items:start}
@@ -197,6 +214,19 @@ svg{width:18px;height:18px;flex-shrink:0;vertical-align:middle}
 .mstep.cur{box-shadow:0 0 0 3px rgba(34,197,94,.25);background:var(--term);border-color:var(--term)}
 .hintbox{margin-top:.8rem;font-size:.82rem;line-height:1.6;color:var(--muted)}
 .hintbox code{color:var(--term)}
+.hint-reveal{margin-top:.45rem;color:var(--subtle)}
+.hint-reveal code{color:var(--term)}
+.hint-done{margin-top:.55rem;color:var(--muted);font-size:.78rem;font-style:italic}
+.manifest-pane{background:#0a0d14;border:1px solid var(--border2);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;min-height:560px}
+.manifest-bar{background:#161b26;padding:.55rem 1rem;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.06);font-family:'JetBrains Mono',monospace;font-size:.74rem;color:#8892a4}
+.manifest-editor{flex:1;min-height:340px;background:#0a0d14;border:none;color:#e6edf3;resize:none;font-family:'JetBrains Mono',monospace;font-size:.82rem;line-height:1.65;padding:1rem 1.15rem;tab-size:2;outline:none}
+.manifest-actions{padding:.6rem 1rem;border-top:1px solid rgba(255,255,255,.06)}
+.manifest-out{padding:.7rem 1.15rem;border-top:1px solid rgba(255,255,255,.06);font-family:'JetBrains Mono',monospace;font-size:.8rem;line-height:1.55;color:#c9d4e6;white-space:pre-wrap}
+.manifest-out code{color:#9ecbff;background:rgba(255,255,255,.06);padding:0 .25rem;border-radius:3px}
+.manifest-out.ok{color:#4ade80}
+.manifest-out.ok code{color:#86efac}
+.manifest-out.err{color:#f87171}
+.manifest-out.err code{color:#fca5a5}
 .terminal{background:#0a0d14;border:1px solid var(--border2);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;min-height:560px}
 .term-bar{background:#161b26;padding:.6rem 1rem;display:flex;align-items:center;gap:.5rem;border-bottom:1px solid rgba(255,255,255,.06)}
 .term-dot{width:11px;height:11px;border-radius:50%}
@@ -259,13 +289,20 @@ svg{width:18px;height:18px;flex-shrink:0;vertical-align:middle}
 .scenario-a strong{color:var(--text)}
 
 /* ── CHEATSHEET ── */
-.cheat-cols{column-width:380px;column-gap:1.25rem}
-.cheat-card{background:var(--bg2);border:1px solid var(--border);border-radius:13px;padding:1.1rem 1.25rem;margin-bottom:1.25rem;break-inside:avoid}
+.cheat-cols{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:1.25rem;align-items:start}
+.cheat-card{background:var(--bg2);border:1px solid var(--border);border-radius:13px;padding:1.1rem 1.25rem}
 .cheat-card h3{font-size:.95rem;font-weight:800;margin-bottom:.7rem;display:flex;align-items:center;gap:.5rem}
 .cheat-row{display:grid;grid-template-columns:1fr;gap:.15rem;padding:.45rem 0;border-bottom:1px solid var(--border)}
 .cheat-row:last-child{border-bottom:none}
 .cheat-cmd{font-family:'JetBrains Mono',monospace;font-size:.78rem;color:var(--code-cmd)}
 .cheat-desc{font-size:.76rem;color:var(--muted);line-height:1.4}
+.cheat-search-wrap{position:relative;margin:0 0 1.25rem}
+.cheat-search{width:100%;background:var(--bg2);border:1px solid var(--border2);border-radius:11px;padding:.7rem 1rem .7rem 2.6rem;font-family:'Sora',sans-serif;font-size:.9rem;color:var(--text);outline:none;transition:border-color .2s}
+.cheat-search:focus{border-color:var(--accent)}
+.cheat-search::placeholder{color:var(--muted)}
+.cheat-search-wrap svg{position:absolute;left:.9rem;top:50%;transform:translateY(-50%);width:17px;height:17px;color:var(--muted);pointer-events:none}
+.cheat-hl{background:rgba(99,102,241,.28);color:var(--text);border-radius:3px;padding:0 .12rem}
+.cheat-empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:2.5rem 1rem;font-size:.9rem}
 
 /* ── STUDY PLAN ── */
 .plan-day{display:flex;gap:1rem;align-items:flex-start;background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1rem 1.2rem;margin-bottom:.7rem;transition:border-color .2s}
@@ -383,7 +420,8 @@ var ICON = {
   docker:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="10" width="4" height="4"/><rect x="8" y="10" width="4" height="4"/><rect x="13" y="10" width="4" height="4"/><rect x="8" y="6" width="4" height="3.5"/><path d="M2 14c0 4 3 6 8 6 7 0 11-4 12-8 1 .5 2 .3 2.5-.5"/></svg>',
   tf:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>',
   sre:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>',
-  spark:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M5 12H2M22 12h-3M6 6l-2-2M20 20l-2-2M18 6l2-2M4 20l2-2"/><circle cx="12" cy="12" r="3"/></svg>'
+  spark:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M5 12H2M22 12h-3M6 6l-2-2M20 20l-2-2M18 6l2-2M4 20l2-2"/><circle cx="12" cy="12" r="3"/></svg>',
+  master:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M7 6H4v2a3 3 0 0 0 3 3"/><path d="M17 6h3v2a3 3 0 0 1-3 3"/><path d="M12 14v3"/><path d="M9 21h6"/><path d="M10 17h4l-.5 4h-3z"/></svg>'
 };
 
 /* ── NAV CONFIG ── */
@@ -404,6 +442,7 @@ var state = {
   missionsDone: {},    // missionId -> true
   pyDone: {},          // exerciseId -> true
   planDone: {},        // dayNum -> true
+  quizScores: {},      // moduleId -> {correct,total}
   curLesson: null,     // lesson id currently open
   curMission: 0,       // mission index
   curPy: 0             // python exercise index
@@ -417,13 +456,13 @@ function load(){
   try{
     var raw = localStorage.getItem(SAVE_KEY); if(!raw) return;
     var d = JSON.parse(raw); if(!d) return;
-    ['lessonsDone','missionsDone','pyDone','planDone'].forEach(function(k){ if(d[k]) state[k]=d[k]; });
+    ['lessonsDone','missionsDone','pyDone','planDone','quizScores'].forEach(function(k){ if(d[k]) state[k]=d[k]; });
     if(d.curLesson) state.curLesson = d.curLesson;
   }catch(e){}
 }
 function resetAllProgress(){
   if(!confirm('Reset ALL progress — lessons, missions, Python exercises, and study plan? This cannot be undone.')) return;
-  state.lessonsDone={}; state.missionsDone={}; state.pyDone={}; state.planDone={};
+  state.lessonsDone={}; state.missionsDone={}; state.pyDone={}; state.planDone={}; state.quizScores={};
   try{ localStorage.removeItem(SAVE_KEY); }catch(e){}
   render(); showToast('Progress reset');
 }
@@ -543,10 +582,10 @@ K('k1','What is Kubernetes (and why it exists)',
       "Its superpowers: self-healing, scaling, rolling deploys, portability.",
       "\"K8s\" = K + (ubernete = 8 letters) + s."])
   + checkq("What does \"declarative\" mean in Kubernetes?",
-      ["You SSH into each server and start containers by hand",
-       "You describe the desired end state and K8s makes reality match it",
-       "You write imperative scripts that run once and exit"],
-      1,
+      ["You describe the desired end state and Kubernetes works to match it",
+       "You SSH into each node and launch the containers by hand yourself",
+       "You write step-by-step scripts that run once and then exit"],
+      0,
       "You declare <em>what</em> you want (e.g. 3 replicas of v2.1). The control loop (\"reconciliation\") continuously compares desired vs actual state and takes action to close the gap. This is why a pod you delete by hand comes right back — the controller notices actual &lt; desired and recreates it.")
 ),
 
@@ -588,8 +627,10 @@ K('k2','The cluster: control plane &amp; worker nodes',
       "<strong>The API server is the only component that touches etcd</strong> — everything funnels through it.",
       "etcd holds all state; back it up or you can't recover the cluster."])
   + checkq("An interviewer asks: \"What stores the state of a Kubernetes cluster?\" Best answer:",
-      ["The kubelet on each node","etcd, a key-value store, accessed only via the API server","The scheduler keeps it in memory"],
-      1,
+      ["The kubelet on each node, which caches the cluster state locally",
+       "The scheduler, which keeps the live cluster state in memory",
+       "etcd, a key-value store reached only through the API server"],
+      2,
       "<strong>etcd</strong> is the source of truth. Critically, components don't read etcd directly — they go through the <strong>kube-apiserver</strong>, which is the single gateway to cluster state. Mentioning both etcd <em>and</em> that the API server fronts it is the senior-level answer.")
 ),
 
@@ -628,7 +669,9 @@ K('k3','Pods: the smallest deployable unit',
       "Don't run bare Pods in prod — let a Deployment manage them.",
       "Sidecar = helper container sharing the Pod (logging, proxy, etc.)."])
   + checkq("Two containers are in the same Pod. How do they communicate fastest?",
-      ["Through a Kubernetes Service","Over <span class='inline'>localhost</span> — they share the Pod's network","They can't; containers are isolated"],
+      ["Through a Kubernetes Service that load-balances between them",
+       "Over <span class='inline'>localhost</span> — they share the Pod's network namespace",
+       "They can't — each container is fully network-isolated"],
       1,
       "Containers in one Pod share a single network namespace, so they reach each other on <span class='inline'>localhost</span> (just different ports). They also share volumes. This is exactly why the sidecar pattern works.")
 ),
@@ -681,8 +724,10 @@ K('k4','Deployments &amp; ReplicaSets: desired state',
       "<strong>Selector labels must match the pod template labels.</strong>",
       "Delete a pod owned by a Deployment and it comes back — that's reconciliation."])
   + checkq("You run <span class='inline'>kubectl delete pod web-xyz</span> on a pod owned by a Deployment. What happens?",
-      ["The pod is gone permanently","A replacement pod is created automatically to restore the desired count","The whole Deployment is deleted"],
-      1,
+      ["The pod is gone for good and the replica count drops to two",
+       "The entire Deployment and its ReplicaSet are deleted too",
+       "A replacement pod is created automatically to restore the count"],
+      2,
       "The ReplicaSet's controller notices actual (2) is below desired (3) and creates a new pod. This is self-healing / reconciliation in action. To truly remove it, you'd scale or delete the Deployment.")
 ),
 
@@ -721,8 +766,10 @@ K('k5','Services: stable networking for ephemeral pods',
       "Internal DNS lets pods reach a Service by name (<span class='inline'>web.namespace.svc.cluster.local</span>).",
       "<span class='inline'>port</span> = Service port; <span class='inline'>targetPort</span> = container port."])
   + checkq("Your web pods need to reach a database running in the same cluster. What Service type?",
-      ["LoadBalancer — you always need a cloud LB","NodePort, to expose it on every node","ClusterIP — internal-only traffic stays in the cluster"],
-      2,
+      ["ClusterIP — internal-only traffic stays inside the cluster",
+       "NodePort — so the database is reachable on every node's IP",
+       "LoadBalancer — cross-pod traffic always needs a cloud LB"],
+      0,
       "Internal traffic (web → db) should use <strong>ClusterIP</strong>, the default. Exposing a database via LoadBalancer or NodePort needlessly puts it on the network edge — a security red flag interviewers will notice.")
 ),
 
@@ -767,8 +814,9 @@ K('k6','ConfigMaps &amp; Secrets: configuration, not code',
       "<strong>Secrets are base64, not encrypted, by default.</strong>",
       "Real protection: etcd encryption-at-rest + RBAC + external managers (Vault)."])
   + checkq("\"Kubernetes Secrets keep my password safe out of the box.\" True or false?",
-      ["True — Secrets are encrypted automatically","False — by default they're only base64-encoded; real safety needs RBAC + encryption-at-rest or an external manager"],
-      1,
+      ["False — by default they're only base64-encoded, not encrypted",
+       "True — Secrets are encrypted at rest inside etcd automatically"],
+      0,
       "Base64 is encoding, not encryption — reversible in one command. Out of the box a Secret is barely more protected than a ConfigMap. You secure it with encryption-at-rest, RBAC, and ideally an external secret manager.")
 ),
 
@@ -802,7 +850,9 @@ K('k7','Namespaces, Labels &amp; Selectors',
       "Label/selector decoupling is how Services, Deployments, and policies find pods.",
       "Labels = select on; annotations = metadata you don't select on."])
   + checkq("How does a Service know which pods to send traffic to?",
-      ["By the pods' IP addresses, hard-coded","By a label selector that matches the pods' labels","By the pods' names"],
+      ["By the pods' IP addresses, recorded when each pod starts",
+       "By a label selector that matches the pods' labels",
+       "By the pods' names, resolved through the cluster DNS"],
       1,
       "Services use a <strong>label selector</strong>. Any pod whose labels match becomes an endpoint automatically, even as pods are created and destroyed. IPs and names are too unstable to rely on.")
 ),
@@ -844,8 +894,10 @@ K('k8','The kubectl mental model &amp; YAML',
       "<span class='inline'>apply -f</span> (declarative, Git-friendly) for real infra; <span class='inline'>create/run</span> (imperative) for quick tasks.",
       "<span class='inline'>-o wide</span> and <span class='inline'>-o yaml</span> reveal more; <span class='inline'>explain</span> documents fields."])
   + checkq("A pod is stuck in <span class='inline'>Pending</span> and never starts. Which command reveals WHY?",
-      ["kubectl logs — read the app output","kubectl describe pod — read the Events at the bottom","kubectl get pods -o wide"],
-      1,
+      ["<span class='inline'>kubectl logs</span> — read the app's startup output",
+       "<span class='inline'>kubectl get pods -o wide</span> — see its node",
+       "<span class='inline'>kubectl describe pod</span> — read the Events section"],
+      2,
       "A Pending pod has no running container yet, so <span class='inline'>logs</span> shows nothing. <span class='inline'>describe pod</span> includes an <strong>Events</strong> section explaining scheduling failures (e.g. \"0/3 nodes available: insufficient memory\"). Reading Events is the #1 K8s debugging skill.")
 )
 
@@ -886,8 +938,10 @@ K('o1','Rolling updates &amp; rollbacks',
       "Rollback is instant — old ReplicaSet is reused.",
       "Recreate = downtime but avoids version overlap; canary/blue-green = advanced patterns."])
   + checkq("Why is a Kubernetes rollback nearly instantaneous?",
-      ["It rebuilds the old image from cache","The previous ReplicaSet still exists at 0 replicas, so it just scales back up","It restores from an etcd snapshot"],
-      1,
+      ["The old ReplicaSet still exists at zero replicas and scales back up",
+       "It rebuilds the previous image from the local layer cache",
+       "It restores the cluster from the latest etcd snapshot on disk"],
+      0,
       "Each Deployment revision is a separate ReplicaSet. The old one isn't deleted — it's scaled to 0. Rollback scales it back up and the new one down. No image rebuild, no snapshot restore.")
 ),
 
@@ -920,8 +974,10 @@ K('o2','Health probes: liveness, readiness, startup',
       "Keep liveness <em>shallow</em> (app only); a deep liveness causes restart storms.",
       "Probe types: httpGet, tcpSocket, exec."])
   + checkq("Your app is alive but temporarily can't serve requests (warming a cache). Which probe should fail?",
-      ["Liveness — so K8s restarts it","Readiness — so K8s stops routing traffic until it's ready, without restarting","Startup — so it never starts"],
-      1,
+      ["Liveness — so Kubernetes restarts the container immediately",
+       "Startup — so the pod is never marked as started at all",
+       "Readiness — so traffic stops until it's ready, without a restart"],
+      2,
       "It's alive, just not ready. <strong>Readiness</strong> failing pulls it out of the Service load-balancer (no traffic) while it warms up, then re-adds it. Failing liveness would needlessly restart a healthy app.")
 ),
 
@@ -954,7 +1010,9 @@ K('o3','Resource requests &amp; limits',
       "CPU in millicores (1000m = 1 core); memory in Mi/Gi.",
       "QoS: Guaranteed > Burstable > BestEffort (eviction order under pressure)."])
   + checkq("A container's memory usage exceeds its memory limit. What happens?",
-      ["It's throttled and runs slower","It's OOMKilled (terminated), then restarted by its controller","Nothing — limits are advisory"],
+      ["It's CPU-throttled and simply runs slower under load",
+       "It's OOMKilled by the kernel, then restarted by its controller",
+       "Nothing happens — memory limits are only advisory hints"],
       1,
       "Memory is incompressible, so the kernel <strong>OOMKills</strong> the container. Its controller restarts it, but if it keeps exceeding memory you'll see CrashLoopBackOff with reason OOMKilled. CPU, by contrast, is throttled (slowed), not killed.")
 ),
@@ -978,8 +1036,10 @@ K('o4','Autoscaling with the HPA',
       "Horizontal = more pods; Vertical (VPA) = bigger pods.",
       "Also scales on memory or custom/external metrics."])
   + checkq("Your HPA reports the CPU metric as <span class='inline'>&lt;unknown&gt;</span> and never scales. Most likely cause?",
-      ["The Deployment has too many replicas","metrics-server isn't installed, or the pods have no CPU requests defined","The cluster is out of memory"],
-      1,
+      ["metrics-server isn't installed, or the pods define no CPU requests",
+       "The Deployment is running with far too many replicas already",
+       "The whole cluster has completely run out of memory"],
+      0,
       "HPA needs a metrics pipeline (metrics-server) AND CPU <em>requests</em> on the pods to compute utilization as a % of request. Missing either gives <span class='inline'>&lt;unknown&gt;</span> and no scaling.")
 ),
 
@@ -1002,8 +1062,10 @@ K('o5','StatefulSets vs Deployments',
       "Stable DNS via a headless Service.",
       "In interviews, mention managed databases as the pragmatic alternative."])
   + checkq("You're deploying a 3-node clustered database where each node has its own data and must keep a stable address. Which object?",
-      ["Deployment with 3 replicas","StatefulSet","DaemonSet"],
-      1,
+      ["A Deployment with three interchangeable replicas",
+       "A DaemonSet that runs one pod per cluster node",
+       "A StatefulSet, for stable identities and per-pod storage"],
+      2,
       "Clustered databases need stable identities and per-pod persistent storage — exactly what a <strong>StatefulSet</strong> provides. A Deployment's pods are interchangeable with random names, which breaks database clustering.")
 ),
 
@@ -1037,8 +1099,10 @@ K('o6','DaemonSets, Jobs &amp; CronJobs',
       "CronJob = a Job on a schedule (backups, cleanups).",
       "CronJob schedule uses standard 5-field cron syntax."])
   + checkq("You need a log-shipping agent running on every node, including nodes added later. Which controller?",
-      ["Deployment with replicas = node count","DaemonSet","CronJob every minute"],
-      1,
+      ["A DaemonSet, which runs exactly one pod on every node",
+       "A Deployment with replicas set to the current node count",
+       "A CronJob that launches the agent once every minute"],
+      0,
       "A <strong>DaemonSet</strong> guarantees exactly one pod per node and automatically adds a pod when new nodes join. Hard-coding replica counts to node count is fragile and won't cover new nodes.")
 ),
 
@@ -1075,7 +1139,9 @@ K('o7','Ingress: HTTP routing into the cluster',
       "Commonly terminates TLS (HTTPS) for your domains.",
       "Newer alternative: the Gateway API."])
   + checkq("You applied an Ingress manifest but nothing routes. The most common reason?",
-      ["Ingress requires a StatefulSet","No Ingress Controller is installed to fulfill the rules","Ingress only works with NodePort Services"],
+      ["Ingress objects must be backed by a StatefulSet to work",
+       "No Ingress Controller is installed to fulfill the rules",
+       "Ingress only routes to Services of type NodePort"],
       1,
       "An Ingress is just a set of routing rules. Something must <em>act</em> on them — an <strong>Ingress Controller</strong> (nginx-ingress, Traefik, cloud-provided). Without one, the rules sit unfulfilled.")
 )
@@ -1106,8 +1172,10 @@ K('t1','Pod lifecycle &amp; the statuses you\'ll see',
       "RESTARTS climbing = flapping container.",
       "First move always: <strong>describe → read Events → logs --previous</strong>."])
   + checkq("A pod shows <span class='inline'>CrashLoopBackOff</span> with 7 restarts. What's your FIRST command?",
-      ["kubectl delete the pod and hope","kubectl logs &lt;pod&gt; --previous to see why the last run crashed","kubectl scale the deployment up"],
-      1,
+      ["<span class='inline'>kubectl delete</span> the pod and hope it recovers",
+       "<span class='inline'>kubectl scale</span> the deployment up a replica",
+       "<span class='inline'>kubectl logs &lt;pod&gt; --previous</span> to see the crash"],
+      2,
       "CrashLoopBackOff means it started and died repeatedly. The crash reason is in the <em>previous</em> container's logs: <span class='inline'>kubectl logs &lt;pod&gt; --previous</span>. Deleting or scaling without reading logs is guessing — interviewers want methodical diagnosis.")
 ),
 
@@ -1133,7 +1201,9 @@ K('t2','CrashLoopBackOff &amp; ImagePullBackOff',
       "\"BackOff\" = K8s waiting longer between retries.",
       "Crash = it ran; ImagePull = it never ran."])
   + checkq("A pod is <span class='inline'>ImagePullBackOff</span>. Would reading the app's logs help?",
-      ["Yes, the logs show the pull error","No — the container never started, so there are no app logs; use describe to see the pull error in Events","Yes, always check logs first"],
+      ["Yes — the app logs will contain the image pull error",
+       "No — the container never started, so use <span class='inline'>describe</span> Events",
+       "Yes — you should always read the logs first regardless"],
       1,
       "With ImagePullBackOff the image never loaded, so the container never ran and has no logs. The pull failure (wrong tag, auth, unreachable registry) shows up in <span class='inline'>kubectl describe pod</span> under Events.")
 ),
@@ -1161,8 +1231,10 @@ K('t3','Pending pods &amp; the scheduler',
       "Always: <span class='inline'>describe pod</span> → read FailedScheduling Events.",
       "Taint repels pods; toleration lets a pod onto a tainted node."])
   + checkq("Three pods are Pending. <span class='inline'>describe</span> shows \"0/4 nodes available: insufficient cpu.\" The fix is NOT:",
-      ["Lower the pods' CPU requests","Add more nodes / capacity","Restart the scheduler repeatedly"],
-      2,
+      ["Restart the scheduler repeatedly until the pods schedule",
+       "Lower the CPU requests the pods are asking for",
+       "Add more nodes or free up existing capacity"],
+      0,
       "The cluster genuinely lacks CPU to satisfy the requests. Real fixes: reduce the requests, add nodes, or free capacity. Restarting the scheduler doesn't create capacity — it's a non-fix that signals you didn't read the Event.")
 ),
 
@@ -1190,8 +1262,10 @@ K('t4','A repeatable debugging workflow (+ RBAC basics)',
       "Pods get permissions via a <strong>ServiceAccount</strong>.",
       "Always least-privilege; never reach for cluster-admin to fix a 403."])
   + checkq("An app's ServiceAccount gets 403 errors from the Kubernetes API. The BEST fix:",
-      ["Bind it to cluster-admin so it just works","Create a Role with only the specific verbs/resources it needs and a RoleBinding to that ServiceAccount","Disable RBAC on the cluster"],
-      1,
+      ["Bind it to cluster-admin so the permission problem disappears",
+       "Disable RBAC on the cluster so requests stop being denied",
+       "Create a narrow Role with only the verbs it needs, plus a RoleBinding"],
+      2,
       "Grant <strong>least privilege</strong>: a narrow Role (just the verbs/resources required) bound to that ServiceAccount. cluster-admin or disabling RBAC \"works\" but is a serious security anti-pattern that interviewers flag immediately.")
 )
 
@@ -1220,8 +1294,10 @@ K('d1','Containers vs VMs',
       "Containers use Linux <strong>namespaces</strong> (isolation) + <strong>cgroups</strong> (resource limits).",
       "Often layered: containers inside VMs for density + a hardware boundary."])
   + checkq("What do all containers on a host share that VMs do not?",
-      ["The same application code","The host's OS kernel","The same IP address"],
-      1,
+      ["The host OS kernel, shared via namespaces and cgroups",
+       "The same application source code and all of its dependencies",
+       "A single shared IP address assigned to the whole host"],
+      0,
       "Containers share the host's <strong>kernel</strong> (isolated via namespaces + cgroups), which is why they're lightweight. Each VM ships its own full guest OS/kernel, which is why they're heavier but more isolated.")
 ),
 
@@ -1248,7 +1324,9 @@ K('d2','Images, layers &amp; the registry',
       "Registry stores images (push/pull); name = registry/repo:tag.",
       "<strong>Pin versions; avoid <span class='inline'>:latest</span> in prod.</strong>"])
   + checkq("Why put <span class='inline'>COPY package.json</span> + install deps BEFORE <span class='inline'>COPY . .</span> in a Dockerfile?",
-      ["It's required syntax order","So a source-code change doesn't invalidate the cached dependency layer (faster rebuilds)","It makes the image smaller"],
+      ["Because Dockerfile syntax requires that exact ordering",
+       "So a source change doesn't bust the cached dependency layer",
+       "Because it makes the final image noticeably smaller"],
       1,
       "Layer caching: if dependencies are installed in an earlier layer and your source is copied later, editing source only rebuilds from the copy step down — the slow dependency install stays cached. Reorder them and every code change re-installs everything.")
 ),
@@ -1306,8 +1384,10 @@ K('d3','Writing a Dockerfile',
       "Run as non-root (<span class='inline'>USER</span>) for security.",
       "Multi-stage builds ship a tiny runtime image without build tools."])
   + checkq("Where does <span class='inline'>RUN npm ci</span> execute?",
-      ["When the container starts","At image build time, baking the result into a layer","Every time the app handles a request"],
-      1,
+      ["Each time the container starts up fresh",
+       "Every time the running app handles a request",
+       "At image build time, baking the result into a layer"],
+      2,
       "<span class='inline'>RUN</span> runs during <strong>build</strong> and its result becomes a cached layer. <span class='inline'>CMD</span>/<span class='inline'>ENTRYPOINT</span> define what runs when the container <em>starts</em>. Mixing these up is a frequent stumble.")
 ),
 
@@ -1346,8 +1426,10 @@ K('d4','Networking, volumes &amp; running containers',
       "<span class='inline'>-p host:container</span> publishes a port; same-network containers resolve each other by name.",
       "Core verbs: build, run, ps, logs, exec, stop/rm — they map closely to kubectl."])
   + checkq("A database container is removed and recreated, and all its data is gone. The fix?",
-      ["Run it with more memory","Mount a volume so data lives outside the container's lifecycle","Use the :latest tag"],
-      1,
+      ["Mount a volume so data lives outside the container lifecycle",
+       "Give the container more memory so it retains its data",
+       "Always run the container from the <span class='inline'>:latest</span> tag"],
+      0,
       "The container's writable layer is destroyed on removal. Persisting data requires a <strong>volume</strong> (named volume or bind mount) stored independently of the container. This is exactly why K8s uses PersistentVolumes for stateful apps.")
 ),
 
@@ -1387,7 +1469,8 @@ K('d5','Docker Compose: multi-container locally',
       "Great for local dev; <strong>not</strong> a production cluster orchestrator (use K8s).",
       "<span class='inline'>depends_on</span> = start order, not readiness — add retry logic."])
   + checkq("True or false: Docker Compose replaces Kubernetes for production.",
-      ["True — Compose scales across many servers with self-healing","False — Compose is for local/single-host dev; K8s handles production orchestration, scaling, and self-healing"],
+      ["True — Compose scales across many hosts and self-heals nodes",
+       "False — Compose is single-host dev; K8s does production orchestration"],
       1,
       "Compose orchestrates containers on a <em>single</em> host for dev/small setups. It doesn't schedule across a cluster, self-heal nodes, or autoscale. Production multi-host orchestration is Kubernetes' domain.")
 )
@@ -1418,8 +1501,10 @@ K('tf1','What is Infrastructure as Code?',
       "It shows a <strong>plan</strong> (diff) before applying changes.",
       "Terraform provisions infra/clusters; K8s runs workloads on them."])
   + checkq("What's the main advantage of Terraform over clicking in a cloud console?",
-      ["It's faster to click once","Infrastructure becomes reproducible, version-controlled code with a reviewable plan before changes","It avoids needing cloud credentials"],
-      1,
+      ["It's quicker than clicking through the console just one time",
+       "It removes the need to hold any cloud credentials at all",
+       "Infrastructure becomes reproducible, version-controlled code"],
+      2,
       "IaC turns infrastructure into reviewable, repeatable, version-controlled code — you can recreate environments exactly, audit history, and preview changes via <span class='inline'>terraform plan</span> before applying. Console clicking is fast once but unreproducible and drift-prone.")
 ),
 
@@ -1460,8 +1545,10 @@ K('tf2','HCL: providers, resources, variables, outputs',
       "<span class='inline'>locals</span> for computed values, <span class='inline'>data</span> to read existing infra.",
       "Mark secret inputs <span class='inline'>sensitive = true</span>."])
   + checkq("In Terraform, what's the difference between a variable and an output?",
-      ["They're the same thing","A variable is an input you provide; an output is a value Terraform exposes after creating resources","Variables are for AWS, outputs for GCP"],
-      1,
+      ["A variable is an input you provide; an output is what Terraform returns",
+       "They are simply two different names for one identical concept",
+       "Variables are only for AWS, while outputs are only for GCP"],
+      0,
       "A <strong>variable</strong> is an <em>input</em> (region, instance size) you pass in. An <strong>output</strong> is a <em>result</em> (the new server's IP) Terraform surfaces after apply — useful for humans or for feeding other tooling.")
 ),
 
@@ -1495,7 +1582,9 @@ K('tf3','State: Terraform\'s memory',
       "State can hold <strong>secrets in plaintext</strong> — encrypt it, restrict access, never commit to Git.",
       "<span class='inline'>terraform import</span> adopts existing resources without recreating them."])
   + checkq("Why does a team store Terraform state remotely (e.g. in S3) instead of a local file?",
-      ["It runs faster","Shared source of truth + state locking so concurrent applies don't corrupt it","Local files can't store AWS resources"],
+      ["Applies simply run faster against remote state than a local file",
+       "A shared source of truth and locking against concurrent applies",
+       "Local files are technically incapable of storing cloud resources"],
       1,
       "Remote state gives the whole team one consistent source of truth and enables <strong>locking</strong> (e.g. via DynamoDB) so two people can't <span class='inline'>apply</span> simultaneously and corrupt state. Local state is fine for one person, risky for a team.")
 ),
@@ -1521,8 +1610,10 @@ K('tf4','The workflow: init, plan, apply, destroy',
       "<span class='inline'>-/+</span> means destroy-and-recreate — dangerous for stateful resources.",
       "Save plans (<span class='inline'>-out</span>) and apply the exact plan in CI."])
   + checkq("Which command previews changes WITHOUT modifying any real infrastructure?",
-      ["terraform apply","terraform plan","terraform init"],
-      1,
+      ["<span class='inline'>terraform apply</span>",
+       "<span class='inline'>terraform init</span>",
+       "<span class='inline'>terraform plan</span>"],
+      2,
       "<span class='inline'>terraform plan</span> is a dry run showing the diff (+/~/-) of what <em>would</em> happen. Nothing changes until <span class='inline'>apply</span>. Reading the plan — and spotting dangerous <span class='inline'>-/+</span> replacements — is the safety habit interviewers look for.")
 ),
 
@@ -1555,8 +1646,10 @@ K('tf5','Modules: reusable infrastructure',
       "Common pattern: thin per-environment root configs calling shared modules.",
       "Access results via <span class='inline'>module.NAME.output</span>."])
   + checkq("Why use Terraform modules?",
-      ["They make terraform apply run faster","To package resources into reusable, parameterized components and avoid copy-paste across environments","They're required for remote state"],
-      1,
+      ["To package resources into reusable, parameterized components",
+       "Because <span class='inline'>terraform apply</span> runs noticeably faster with them",
+       "Because remote state simply cannot function without modules"],
+      0,
       "Modules are reusable building blocks (inputs + outputs) — define \"a web cluster\" once and instantiate it for dev and prod with different variables. This keeps configs DRY, consistent, and maintainable, just like functions in code.")
 )
 
@@ -1599,7 +1692,9 @@ K('py1','Why Python, and the patterns SREs actually use',
       "Plus: HTTP+JSON, retry/backoff, simple math (%, percentiles).",
       "Write <em>readable</em> code and talk through it — clarity beats cleverness."])
   + checkq("In an SRE coding round you're most likely asked to:",
-      ["Implement a red-black tree from scratch","Parse a log file and summarize it (e.g. count errors by type)","Train a neural network"],
+      ["Implement a balanced red-black tree entirely from scratch",
+       "Parse a log file and summarize it, e.g. count errors by type",
+       "Design, build, and train a small neural network model"],
       1,
       "SRE coding is operational: parse logs, call APIs, transform data, add retries. They're testing whether you can write clear, correct, practical Python — exactly what the Python Lab tab drills.")
 ),
@@ -1642,8 +1737,10 @@ K('py2','Strings, dicts &amp; comprehensions (the parsing toolkit)',
       "Comprehensions filter/transform concisely: <span class='inline'>[x for x in xs if cond]</span>.",
       "list = ordered+dupes, dict = key→value, set = unique."])
   + checkq("You need the number of UNIQUE IP addresses in a log. Best data structure?",
-      ["A list — append every IP","A set — it automatically keeps only unique values, then take its length","A string of all IPs joined"],
-      1,
+      ["A list you append every single IP address to",
+       "One big string with all of the IPs joined together",
+       "A set, which keeps only unique values — then take its length"],
+      2,
       "A <strong>set</strong> stores each value once. Add every IP to a set and <span class='inline'>len(the_set)</span> is the unique count. A list keeps duplicates, so you'd have to de-dup it anyway.")
 ),
 
@@ -1693,8 +1790,10 @@ K('py3','APIs, JSON &amp; retries (real ops code)',
       "Retry transient errors with <strong>exponential backoff</strong> (1,2,4,8…) and a cap.",
       "Add <strong>jitter</strong> to avoid synchronized retry storms."])
   + checkq("Why use exponential backoff (1s, 2s, 4s…) instead of retrying every 100ms?",
-      ["It's simpler to code","Hammering a struggling service every 100ms can keep it down; backing off gives it room to recover and avoids overload","Backoff makes requests faster"],
-      1,
+      ["Hammering a failing service keeps it down; backing off lets it recover",
+       "It's noticeably simpler to write than a fixed-interval retry",
+       "Backing off makes each individual request complete faster"],
+      0,
       "Retrying aggressively piles load onto an already-failing service, often preventing recovery (and worsening an outage). <strong>Exponential backoff</strong> spaces out retries so the system can recover; <strong>jitter</strong> further avoids many clients retrying in lockstep.")
 )
 
@@ -1730,7 +1829,9 @@ K('s1','SLIs, SLOs, SLAs &amp; error budgets',
       "Budget left → ship; budget gone → freeze and stabilize.",
       "100% is the wrong target — pick &lt;100% on purpose."])
   + checkq("Your SLO is 99.9% monthly availability. You've had 40 minutes of downtime this month. What does the error budget say?",
-      ["Stop everything — you've failed","You have ~3 minutes of budget left (budget ≈ 43 min); slow risky changes and protect reliability","Ship faster to make up for it"],
+      ["Stop everything — the SLO is already completely blown",
+       "About 3 minutes of budget remain — slow risky changes now",
+       "Ship even faster to make up for the lost availability"],
       1,
       "99.9% over 30 days allows ~43 minutes of downtime. At 40 used, ~3 minutes remain — nearly exhausted. The error-budget policy says: pause risky launches and prioritize reliability until you're comfortably back under SLO.")
 ),
@@ -1753,8 +1854,10 @@ K('s2','Toil, automation &amp; the SRE mindset',
       "Automate the <strong>highest-cost</strong> toil first — measure, then prioritize.",
       "Investigation/design is not toil; mindless repetition is."])
   + checkq("Which of these is toil?",
-      ["Designing a new deployment pipeline","Manually SSHing to restart the same stuck service every night","Writing a postmortem analysis"],
-      1,
+      ["Designing a brand-new deployment pipeline from scratch",
+       "Writing a thorough postmortem after an incident",
+       "Manually SSHing to restart the same stuck service nightly"],
+      2,
       "Toil is <strong>manual, repetitive, automatable</strong> work with no lasting value — like nightly manual restarts. The fix is to automate it (or fix the root cause). Design and analysis create lasting value, so they aren't toil.")
 ),
 
@@ -1782,8 +1885,10 @@ K('s3','Observability: metrics, logs &amp; traces',
       "Use <strong>percentiles (p99)</strong>, not averages — tails matter.",
       "Microservices need tracing to locate cross-service latency."])
   + checkq("A microservices request is slow, but you don't know which of 8 services is the culprit. Which pillar pinpoints it?",
-      ["Metrics — they'll show the exact service","Distributed traces — they follow one request across all services and show where time is spent","Logs — grep everything"],
-      1,
+      ["Distributed traces — they follow one request across services",
+       "Metrics — they'll point straight at the exact slow service",
+       "Logs — just grep across everything until you find it"],
+      0,
       "<strong>Traces</strong> follow a single request end-to-end across services, showing the time spent in each hop — perfect for finding the slow service. Metrics tell you something's slow; logs give detail; traces localize <em>where</em>.")
 ),
 
@@ -1810,7 +1915,9 @@ K('s4','Incident response &amp; blameless postmortems',
       "Blameless postmortems → fix systems, not people; honesty surfaces root causes.",
       "Output concrete <strong>action items with owners</strong> to prevent recurrence."])
   + checkq("A deploy 10 minutes ago caused an active outage. What do you do FIRST?",
-      ["Start a deep root-cause investigation to understand exactly why","Roll back the deploy to stop user impact, then investigate the cause afterward","Write the postmortem"],
+      ["Start a deep root-cause investigation into exactly why it broke",
+       "Roll back the deploy to stop impact, then investigate after",
+       "Write up the postmortem document for the incident"],
       1,
       "<strong>Mitigate first.</strong> A recent deploy correlating with an outage → roll it back immediately to restore service, then root-cause at leisure. Investigating while users suffer is the wrong order; the postmortem comes after resolution.")
 ),
@@ -1837,13 +1944,75 @@ K('s5','Reliability patterns: timeouts, retries, circuit breakers',
       "Graceful degradation &amp; bulkheads contain blast radius.",
       "Naive retries cause <strong>retry storms</strong> — always pair with backoff + breakers."])
   + checkq("A downstream service is failing. Why add a circuit breaker on top of retries?",
-      ["To retry even more aggressively","After repeated failures it 'trips' and fails fast — protecting your threads and not piling more load onto the dead dependency","To make requests encrypted"],
-      1,
+      ["So the client retries the dead dependency even more aggressively",
+       "To make all requests to the dependency encrypted in transit",
+       "After repeated failures it trips and fails fast, shedding load"],
+      2,
       "A circuit breaker stops you from endlessly retrying/waiting on a dead dependency. It fails fast (freeing your resources) and relieves load so the dependency can recover, then tests with a half-open state. Retries alone can worsen the outage (retry storm).")
 )
 
 ]});
 /*LEARN_END*/
+
+/* ── END-OF-SECTION QUIZZES (one per Learn module, keyed by module id) ── */
+var QUIZZES = {
+  "k8s-core":[
+    {q:"Which control-plane component is the single gateway every read and write goes through?", opts:["The kube-apiserver \u2014 all components talk to it", "The scheduler, which assigns pods to nodes", "The kubelet, which runs on each worker node"], correct:0, explain:"The kube-apiserver is the front door: kubectl, controllers, and kubelets all go through it, and it alone reads and writes etcd.", whys:["", "The scheduler only picks which node a pod lands on \u2014 it doesn't serve cluster state.", "The kubelet runs pods on one node; it's a client of the apiserver, not the gateway."]},
+    {q:"A Deployment manages its pods through which intermediate object?", opts:["It manages the pods directly, with no layer in between", "A ReplicaSet that keeps the desired number of pods running", "A DaemonSet that schedules one pod onto every node"], correct:1, explain:"A Deployment creates a ReplicaSet, which keeps the right number of pod copies alive; rollouts shift pods between ReplicaSets.", whys:["There is a layer: the Deployment owns a ReplicaSet, which owns the pods.", "", "A DaemonSet is a separate one-pod-per-node controller, not what a Deployment uses."]},
+    {q:"What is the smallest unit you actually deploy in Kubernetes?", opts:["A single container image pulled from a registry", "A node, which is one machine in the cluster", "A Pod, which wraps one or more containers"], correct:2, explain:"You deploy Pods, not bare containers; a Pod holds one or more containers sharing a network namespace and storage.", whys:["An image is just packaging; Kubernetes schedules Pods, not images directly.", "A node is hardware the scheduler places pods onto \u2014 not something you deploy.", ""]},
+    {q:"How does a ConfigMap differ from a Secret?", opts:["A ConfigMap holds plain config; a Secret holds sensitive values", "A ConfigMap is encrypted while a Secret is plain text", "They are identical and the names are interchangeable"], correct:0, explain:"Both inject config, but Secrets are for sensitive data (base64, tighter RBAC and encryption); ConfigMaps are for ordinary settings.", whys:["", "It's the other way around \u2014 Secrets are the sensitive ones, and neither is encrypted by default.", "They have different purposes and different default handling."]},
+    {q:"Why are labels and selectors so central to how Kubernetes works?", opts:["They mainly make the dashboard easier for humans to read", "Objects find each other by matching labels, not fixed names", "They are required only for billing and cost allocation"], correct:1, explain:"Services and controllers select pods by matching labels, so membership stays dynamic as pods come and go.", whys:["Readability is a side effect, not why Services and controllers rely on them.", "", "Labels can help cost reporting, but their core job is dynamic selection."]},
+    {q:"What problem do namespaces primarily solve?", opts:["They encrypt traffic between pods automatically", "They pin pods to a specific physical node", "They scope and isolate resources within one cluster"], correct:2, explain:"Namespaces partition a cluster into virtual segments (e.g. team-a, team-b) for organization, access control, and quotas.", whys:["Namespaces don't do encryption \u2014 that's NetworkPolicies or a service mesh.", "Node placement is the scheduler's job via affinity/selectors, not namespaces.", ""]}
+  ],
+  "k8s-ops":[
+    {q:"During a rolling update, what keeps the app available the whole time?", opts:["All old pods stop first, then the new pods are created", "New pods come up and pass readiness before old ones go", "Traffic pauses briefly while every pod is replaced at once"], correct:1, explain:"A rolling update brings up new pods, waits for Ready, then retires old ones, so capacity always serves traffic.", whys:["Stopping all old pods first would cause downtime \u2014 the opposite of rolling.", "", "There is no global pause; replacement is gradual and overlapping."]},
+    {q:"Which probe decides whether a pod currently receives traffic?", opts:["The readiness probe \u2014 failing it pulls the pod from the Service", "The liveness probe \u2014 failing it keeps traffic flowing normally", "The startup probe \u2014 failing it sends extra traffic to the pod"], correct:0, explain:"Readiness gates traffic: fail it and the pod leaves the Service endpoints, with no restart; liveness restarts the container.", whys:["", "Failing liveness restarts the container; it doesn't keep serving traffic.", "Startup just delays other probes during boot; it never increases traffic."]},
+    {q:"What is the difference between a resource request and a limit?", opts:["Request and limit are two words for the same guarantee", "A request reserves a minimum; a limit caps the maximum", "A request is the maximum and a limit is the minimum"], correct:1, explain:"The scheduler places pods by requests (a guaranteed minimum); limits cap usage \u2014 over a memory limit is OOMKill, over CPU is throttling.", whys:["They're distinct: one reserves capacity, the other caps it.", "", "Reversed \u2014 the request is the floor and the limit is the ceiling."]},
+    {q:"A HorizontalPodAutoscaler needs what in order to scale on CPU?", opts:["A LoadBalancer Service attached to the Deployment", "A StatefulSet instead of a Deployment to hold metrics", "A metrics source plus CPU requests set on the pods"], correct:2, explain:"The HPA needs metrics-server and CPU requests to compute usage as a percentage of request; missing either yields unknown and no scaling.", whys:["A Service exposes traffic; it has nothing to do with autoscaling math.", "StatefulSets are for stable identity and storage, not a metrics requirement.", ""]},
+    {q:"You need exactly one pod on every node, including nodes added later. Which object?", opts:["A DaemonSet, which runs one pod per node automatically", "A Deployment with replicas hard-coded to the node count", "A Job that runs once on each node and then exits"], correct:0, explain:"A DaemonSet guarantees one pod per node and adds one when nodes join \u2014 ideal for log and monitoring agents.", whys:["", "A fixed replica count won't cover nodes added later or guarantee one-per-node.", "A Job runs to completion and exits; it won't keep an agent running."]},
+    {q:"When do you reach for a StatefulSet over a Deployment?", opts:["When pods are identical and fully interchangeable", "When each pod needs a stable identity and its own storage", "When you want one pod on every node in the cluster"], correct:1, explain:"StatefulSets give stable network IDs and per-pod persistent volumes \u2014 needed for databases and clustered stateful apps.", whys:["Interchangeable, stateless pods are exactly the Deployment case.", "", "One-pod-per-node is the DaemonSet pattern, not a StatefulSet."]}
+  ],
+  "k8s-debug":[
+    {q:"Where does a Pending pod's scheduling failure show up?", opts:["In the pod's application logs via kubectl logs", "In the Events section of kubectl describe pod", "Only in the kube-scheduler's own internal logs"], correct:1, explain:"A Pending pod has no container yet, so logs are empty; describe pod's Events show why it can't schedule.", whys:["No container is running yet, so there are no application logs to read.", "", "You don't need scheduler logs \u2014 the reason is on the pod's Events."]},
+    {q:"A pod is in CrashLoopBackOff. Which command shows why it died?", opts:["kubectl get pods -o wide to see its node and IP", "kubectl scale to add more replicas of the pod", "kubectl logs --previous to read the last run's output"], correct:2, explain:"CrashLoopBackOff means it keeps dying; the crash reason is in the previous container's logs (--previous).", whys:["Node and IP don't tell you why the process exited.", "More replicas just multiplies the crash; it doesn't reveal the cause.", ""]},
+    {q:"ImagePullBackOff most likely means:", opts:["Kubernetes can't pull the image \u2014 bad tag, auth, or registry", "The application crashed shortly after it started running", "The pod can't be scheduled onto any available node"], correct:0, explain:"ImagePullBackOff is a pull failure (wrong tag, missing creds, unreachable registry); the container never starts.", whys:["", "A crash after starting is CrashLoopBackOff, not a pull error.", "Unschedulable shows as Pending, not ImagePullBackOff."]},
+    {q:"An app's ServiceAccount gets 403s from the API. The best fix is to:", opts:["Bind it to cluster-admin so the errors disappear fast", "Grant a narrow Role with only the verbs it needs", "Turn off RBAC on the cluster so nothing is denied"], correct:1, explain:"Least privilege: a small Role scoped to the needed verbs and resources, bound to that ServiceAccount.", whys:["cluster-admin over-grants and is a serious security risk.", "", "Disabling RBAC removes all protection cluster-wide \u2014 an anti-pattern."]},
+    {q:"A container shows reason OOMKilled. What happened?", opts:["It lost all network connectivity to the API server", "Its image tag could not be found in the registry", "It exceeded its memory limit, so the kernel killed it"], correct:2, explain:"Memory is incompressible: exceed the memory limit and the kernel OOMKills the container; repeated, it shows as CrashLoopBackOff.", whys:["Network loss doesn't trigger OOMKilled \u2014 that's a memory event.", "A missing image is ImagePullBackOff, not OOMKilled.", ""]},
+    {q:"What's the most reliable first move on almost any broken pod?", opts:["kubectl describe pod and read the Events", "Delete the pod and hope it comes back healthy", "Restart every node in the cluster immediately"], correct:0, explain:"describe pod's Events explain scheduling, image, and probe failures \u2014 the highest-signal first step, before logs.", whys:["", "Deleting blindly loses evidence and often recreates the same failure.", "Rebooting nodes is disruptive and rarely the actual cause."]}
+  ],
+  "docker":[
+    {q:"What do containers share that virtual machines do not?", opts:["Their own full guest operating system per container", "The host kernel, isolated by namespaces and cgroups", "A dedicated hypervisor managing each container"], correct:1, explain:"Containers share the host kernel (namespaces and cgroups), making them light; VMs each ship a full guest OS.", whys:["That describes VMs \u2014 containers don't each carry a full OS.", "", "Hypervisors run VMs; containers use the host kernel instead."]},
+    {q:"Why copy package files and install dependencies before copying source code?", opts:["Docker requires dependencies to be installed first by syntax", "It keeps the dependency layer cached when only source changes", "It noticeably reduces the final image's total size"], correct:1, explain:"Install deps in an earlier layer, copy source later, so source edits don't bust the cached dependency install.", whys:["There's no syntax rule forcing the order \u2014 it's a caching optimization.", "", "Order affects rebuild speed via caching, not the final image size."]},
+    {q:"When does a RUN instruction in a Dockerfile execute?", opts:["At image build time, baking its result into a layer", "Every time the running container handles a request", "Once each time the container is started up"], correct:0, explain:"RUN executes during build and becomes a cached layer; CMD and ENTRYPOINT define start-time behavior.", whys:["", "Per-request execution isn't a Docker concept; RUN is build-time only.", "Start-time commands are CMD/ENTRYPOINT, not RUN."]},
+    {q:"A container is recreated and all its data is gone. The fix?", opts:["Run the container with a larger memory allocation", "Always pull the image using the :latest tag", "Mount a volume so data lives outside the container"], correct:2, explain:"A container's writable layer is destroyed on removal; volumes persist data independently of the container.", whys:["Memory has nothing to do with on-disk persistence.", "The tag changes which image you run, not whether data survives.", ""]},
+    {q:"What's the relationship between an image and a container?", opts:["They are the same thing with two different names", "An image is the blueprint; a container is a running instance", "A container is built once; an image is started and stopped"], correct:1, explain:"An image is a static, read-only stack of layers; a container is a running instance with a writable top layer \u2014 like class vs object.", whys:["They're distinct: one is static packaging, the other is a live process.", "", "Reversed \u2014 images are built; containers are what you start and stop."]},
+    {q:"True or false: Docker Compose replaces Kubernetes in production.", opts:["False \u2014 Compose is single-host dev; K8s orchestrates production", "True \u2014 Compose self-heals and scales across many hosts", "True \u2014 they are interchangeable for any deployment"], correct:0, explain:"Compose orchestrates containers on one host for dev; production multi-host scaling and self-healing are Kubernetes' job.", whys:["", "Compose runs on a single host and doesn't self-heal a cluster.", "They target different scales and aren't interchangeable."]}
+  ],
+  "terraform":[
+    {q:"What is the main advantage of Terraform over clicking in a cloud console?", opts:["It is faster for a single one-off manual change", "Infrastructure becomes reproducible, reviewable code", "It removes the need for any cloud credentials"], correct:1, explain:"IaC makes infrastructure version-controlled, repeatable, and reviewable, with a plan preview before changes.", whys:["A single click can be quicker once, but it isn't repeatable or auditable.", "", "You still need cloud credentials for Terraform to make changes."]},
+    {q:"Which command previews changes without touching real infrastructure?", opts:["terraform plan, a dry run showing the diff", "terraform apply, which makes the changes now", "terraform init, which sets up the directory"], correct:0, explain:"plan shows the +/~/- diff of what would happen; nothing changes until apply.", whys:["", "apply actually performs the changes \u2014 it's not a preview.", "init sets up providers and backend; it doesn't show a change diff."]},
+    {q:"Why store Terraform state remotely instead of in a local file?", opts:["Remote state makes every apply command run noticeably faster", "Local files simply cannot represent cloud resources at all", "A shared source of truth and locking against concurrent applies"], correct:2, explain:"Remote state gives the team one source of truth and locking so simultaneous applies can't corrupt it.", whys:["Speed isn't the reason; consistency and locking are.", "Local state files work fine for one person \u2014 they do store resource info.", ""]},
+    {q:"What is the difference between a variable and an output?", opts:["A variable is an input; an output is a value Terraform returns", "They are two different names for the very same concept", "Variables are for AWS while outputs are for GCP"], correct:0, explain:"A variable is an input you pass in; an output is a result (like an IP) Terraform surfaces after apply.", whys:["", "They're opposites: one feeds in, the other reports out.", "Both work with any provider; the split is input vs output."]},
+    {q:"Why use Terraform modules?", opts:["They are required before you can ever use remote state", "To package resources into reusable, parameterized parts", "They make terraform apply commands run noticeably faster"], correct:1, explain:"Modules are reusable building blocks with inputs and outputs \u2014 define a pattern once and reuse it across environments.", whys:["Remote state and modules are independent features.", "", "Modules organize config; they don't speed up apply."]},
+    {q:"In a plan, which symbol warns a resource will be destroyed and recreated?", opts:["A leading + meaning a brand-new resource is created", "A leading ~ meaning an existing resource updates in place", "A leading -/+ meaning replace (destroy then create)"], correct:2, explain:"-/+ means Terraform will destroy and recreate the resource \u2014 potentially disruptive, so always read for it.", whys:["+ is a pure create, with nothing destroyed.", "~ is an in-place change, with no destruction.", ""]}
+  ],
+  "python":[
+    {q:"Best structure to count how many times each item appears?", opts:["A list you keep appending every item to", "A dict (or collections.Counter) keyed by item", "A single string with all the items concatenated"], correct:1, explain:"Use d[k] = d.get(k,0)+1 or collections.Counter to tally in one pass.", whys:["A list keeps everything; you'd still have to count duplicates after.", "", "A concatenated string makes counting harder, not easier."]},
+    {q:"You need the count of UNIQUE IPs in a log. Best tool?", opts:["A set, then take its length for the unique count", "A list, appending every IP you encounter", "Sorting the whole file and counting all lines"], correct:0, explain:"A set stores each value once, so len(the_set) is the unique count.", whys:["", "A list keeps duplicates, so its length isn't the unique count.", "Sorting still counts repeats, not unique values."]},
+    {q:"When calling an external API in Python, you should always:", opts:["Retry instantly in a tight loop until it succeeds", "Skip error handling since requests rarely fail", "Set a timeout and handle failures with retry and backoff"], correct:2, explain:"Always set a timeout so a hung call can't block forever, and wrap with try/except plus backoff.", whys:["A tight retry loop hammers the service and can worsen an outage.", "Network calls fail often; unhandled errors crash your script.", ""]},
+    {q:"Why use exponential backoff between retries instead of retrying instantly?", opts:["Retrying every few ms can keep a struggling service down", "Backoff makes each individual request return faster", "It is simply less code than a fixed-interval retry"], correct:0, explain:"Aggressive retries pile load on a failing service; backoff spaces them out, and jitter avoids lockstep retries.", whys:["", "Backoff adds waiting; it doesn't make a single request faster.", "Backoff is usually slightly more logic, not less."]},
+    {q:"What does [x for x in xs if cond] produce?", opts:["It modifies xs in place and returns nothing", "A new list of the items in xs that satisfy cond", "A single boolean: whether any item meets cond"], correct:1, explain:"A list comprehension builds a new filtered or transformed list, leaving the original untouched.", whys:["Comprehensions return a new list; they don't mutate the source.", "", "That would be any(); a comprehension returns a list, not a boolean."]},
+    {q:"Why use d.get(k, 0) instead of d[k] when counting?", opts:["It automatically sorts the dictionary keys for you", "It is meaningfully faster than plain bracket access", "It returns a default instead of a KeyError on a new key"], correct:2, explain:"d.get(k, 0) yields 0 for a missing key, so d[k]=d.get(k,0)+1 works the first time a key appears.", whys:["get() doesn't sort anything.", "Speed is negligible; correctness on missing keys is the point.", ""]}
+  ],
+  "sre":[
+    {q:"What is an error budget?", opts:["The cloud spend allowed for reliability tooling", "The allowed unreliability: 100% minus the SLO", "The number of engineers assigned to on-call"], correct:1, explain:"Error budget = 100% minus SLO; 99.9% allows about 0.1% (~43 min/month) of downtime to spend.", whys:["It's a reliability allowance, not a money budget.", "", "On-call staffing is unrelated to the error-budget definition."]},
+    {q:"What are the Four Golden Signals?", opts:["CPU, memory, disk, and network bandwidth", "Uptime, cost, headcount, and deploy frequency", "Latency, traffic, errors, and saturation"], correct:2, explain:"The Four Golden Signals are Latency, Traffic, Errors, and Saturation (track latency by percentiles).", whys:["Those are host metrics, not the Golden Signals.", "Those are business and ops metrics, not the four signals.", ""]},
+    {q:"A deploy 10 minutes ago caused an active outage. What do you do FIRST?", opts:["Roll it back to stop user impact, then investigate", "Open a deep root-cause investigation before acting", "Write up the postmortem document right away"], correct:0, explain:"Mitigate first: roll back the suspect deploy to restore service, then root-cause calmly.", whys:["", "Investigating while users suffer prolongs the outage.", "Postmortems come after the incident is resolved."]},
+    {q:"Which best describes toil?", opts:["Designing a new system or automation from scratch", "Manual, repetitive, automatable work with no lasting value", "Any work that happens to land during an on-call shift"], correct:1, explain:"Toil is manual, repetitive, automatable work that scales with load \u2014 automate it and keep it near 50% or less.", whys:["Design creates lasting value, so it isn't toil.", "", "On-call can include non-toil work like real investigation and design."]},
+    {q:"A request is slow across 8 microservices. Which observability pillar localizes where?", opts:["Distributed traces, which follow one request across services", "Metrics, which point straight at the exact slow service", "Logs, by grepping everything until something turns up"], correct:0, explain:"Traces follow a single request end-to-end and show time per hop \u2014 ideal for finding the slow service.", whys:["", "Metrics tell you something is slow, not which hop.", "Logs give detail but don't localize across services efficiently."]},
+    {q:"Why add a circuit breaker on top of retries?", opts:["To retry the dead dependency even more aggressively", "To encrypt all requests to the dependency in transit", "After repeated failures it trips and fails fast, shedding load"], correct:2, explain:"A breaker stops endless retries on a dead dependency, fails fast to free resources, and lets it recover (half-open).", whys:["More retries cause a retry storm \u2014 the opposite of the goal.", "Encryption is unrelated to failure handling.", ""]}
+  ]
+};
 </script>
 <!-- DATA: LAB MISSIONS + KUBECTL ENGINE -->
 <script id="data-lab">
@@ -1894,73 +2063,231 @@ var MISSIONS = [
   { id:'m1', title:'Survey the cluster', icon:'🗺️',
     task:'Every diagnosis starts with the big picture. List the cluster\'s <b>nodes</b> to see the machines you have to work with.',
     eli5:'Nodes are the physical/virtual machines your pods run on. Before fixing anything, see how many you\'ve got and whether they\'re <code>Ready</code>.',
-    hints:['Verb–noun: <code>kubectl get nodes</code>'],
+    hints:['It follows the <code>verb resource</code> shape — the verb is <code>get</code>; the resource is the machines your pods run on.'],
     check:function(h,cl){ return h.some(function(c){ return /^k(ubectl)?\s+get\s+(nodes?|no)(\s|$)/.test(c); }); } },
   { id:'m2', title:'List the pods', icon:'📦',
     task:'See what\'s running in the default namespace. List the <b>pods</b>.',
     eli5:'Pods are the running units of work. <code>get pods</code> shows their STATUS, READY count, and RESTARTS — your first health snapshot.',
-    hints:['<code>kubectl get pods</code>'],
+    hints:['Same <code>get</code> verb — this time list the running units of work in the current namespace.'],
     check:function(h){ return h.some(function(c){ return /^k(ubectl)?\s+get\s+(pods?|po)(\s|$)(?!.*-(A|-all-namespaces))/.test(c) || /^k(ubectl)?\s+get\s+(pods?|po)$/.test(c); }); } },
   { id:'m3', title:'Look across all namespaces', icon:'🌐',
     task:'Cluster components live in other namespaces. List pods in <b>every</b> namespace at once.',
     eli5:'By default you only see the current namespace. The <code>-A</code> (or <code>--all-namespaces</code>) flag reveals everything, including <code>kube-system</code> where the control-plane pods live.',
-    hints:['<code>kubectl get pods -A</code>','…or <code>kubectl get pods --all-namespaces</code>'],
+    hints:['Take your pod-listing command and add the flag that widens it to <i>every</i> namespace — it has a single-letter short form and a long <code>--all-…</code> form.'],
     check:function(h){ return h.some(function(c){ return /get\s+(pods?|po)\b/.test(c) && /(-A\b|--all-namespaces)/.test(c); }); } },
   { id:'m4', title:'Get more detail with -o wide', icon:'🔍',
     task:'Find out which <b>node</b> each pod is on and its pod <b>IP</b>. List pods with wide output.',
     eli5:'<code>-o wide</code> adds columns like NODE and IP. Super useful when you suspect one node is unhealthy and want to see what\'s scheduled where.',
-    hints:['<code>kubectl get pods -o wide</code>'],
+    hints:['Keep listing pods, but switch the output format with <code>-o</code> to the view that adds NODE and IP columns.'],
     check:function(h){ return h.some(function(c){ return /get\s+(pods?|po)\b/.test(c) && /-o\s+wide/.test(c); }); } },
   { id:'m5', title:'Inspect a pod up close', icon:'📋',
     task:'Use <b>describe</b> on one of the <code>web-*</code> pods to see its full detail and Events.',
     eli5:'<code>describe</code> is your magnifying glass: container spec, current/last state, and an <b>Events</b> log at the bottom. Reading Events is the #1 debugging skill in K8s.',
-    hints:['<code>kubectl describe pod web-6d8f4c9b7-aa1k2</code>','Tab-style: any pod whose name starts with <code>web-</code>'],
+    hints:['Copy a real <code>web-</code> pod name from your pod list, then run <code>describe</code> against that specific pod.'],
     check:function(h){ return h.some(function(c){ return /describe\s+(pod|po)\s+web-/.test(c); }); } },
   { id:'m6', title:'Find why the API is crashing', icon:'💥',
     task:'The <code>api-*</code> pod is in <b>CrashLoopBackOff</b>. Read the logs from its <b>crashed</b> previous run to find the root cause.',
     eli5:'A crashing pod restarts, so its <i>current</i> logs may be empty. <code>--previous</code> shows the output from the run that just died — where the real error message is.',
-    hints:['<code>kubectl logs api-7c4d99b8-xk29q --previous</code>','Look for the FATAL line — a required env var is missing.'],
+    hints:['Use <code>logs</code> on the <code>api-</code> pod, adding the flag that reads the <i>previous</i> (crashed) run instead of the current one.','The FATAL line near the end names a required env var that\'s missing.'],
     check:function(h){ return h.some(function(c){ return /logs\s+.*api-/.test(c) && /(--previous|\s-p\b)/.test(c); }); } },
   { id:'m7', title:'Diagnose an image-pull failure', icon:'🚫',
     task:'The <code>cache-0</code> pod is <b>ImagePullBackOff</b>. <b>describe</b> it and read the Events to see why the image won\'t pull.',
     eli5:'ImagePullBackOff means the container never started — so there are no app logs. The reason (bad tag, auth, unreachable registry) is in the <b>Events</b> from <code>describe</code>.',
-    hints:['<code>kubectl describe pod cache-0</code>','The Events show the image tag doesn\'t exist (a typo).'],
+    hints:['No app logs exist yet — a <code>describe</code> on the pod puts the reason in its <b>Events</b>. Look for the image tag it can\'t find.'],
     check:function(h){ return h.some(function(c){ return /describe\s+(pod|po)\s+cache-0/.test(c); }); } },
   { id:'m8', title:'Scale up the web tier', icon:'📈',
     task:'Traffic is rising. Scale the <code>web</code> deployment to <b>5</b> replicas.',
     eli5:'Scaling changes the desired pod count. The Deployment\'s controller then creates pods until reality matches your number — self-healing in action.',
-    hints:['<code>kubectl scale deployment web --replicas=5</code>'],
+    hints:['The verb is <code>scale</code>; set the desired count with a <code>--replicas</code> flag on the <code>web</code> deployment.'],
     check:function(h,cl){ var d=cl.deployments.find(function(x){return x.name==='web';}); return d && d.replicas===5; } },
   { id:'m9', title:'Ship a new version (rolling update)', icon:'🚀',
     task:'Update the <code>web</code> deployment\'s <code>nginx</code> container to image <b>nginx:1.28</b>.',
     eli5:'Changing the image triggers a rolling update: new pods come up and pass health checks before old ones are removed, so the app stays available the whole time.',
-    hints:['<code>kubectl set image deployment/web nginx=nginx:1.28</code>'],
+    hints:['Reach for <code>set image</code>. Its pattern is <code>deploy/&lt;name&gt; &lt;container&gt;=&lt;image:tag&gt;</code> — here the container is <code>nginx</code>.'],
     check:function(h,cl){ var d=cl.deployments.find(function(x){return x.name==='web';}); return d && d.image==='nginx:1.28'; } },
   { id:'m10', title:'Roll it back', icon:'⏪',
     task:'Uh oh — assume 1.28 misbehaves. <b>Roll back</b> the <code>web</code> deployment to the previous version.',
     eli5:'Rollback is instant because the old ReplicaSet still exists at 0 replicas. <code>rollout undo</code> just reverses the scale — no rebuild needed.',
-    hints:['<code>kubectl rollout undo deployment/web</code>','(Do mission 9 first so there\'s a version to roll back from.)'],
+    hints:['The <code>rollout</code> command has a subcommand that <i>reverses</i> the last change — apply it to the <code>web</code> deployment.','Run mission 9 first so there\'s a revision to go back to.'],
     check:function(h,cl){ var d=cl.deployments.find(function(x){return x.name==='web';}); return d && d.undone===true; } },
   { id:'m11', title:'Restart the fleet', icon:'🔄',
     task:'Force a fresh rollout of all <code>web</code> pods (e.g. to pick up a new ConfigMap) with <b>rollout restart</b>.',
     eli5:'<code>rollout restart</code> recreates the pods gradually without changing the image — handy when config changed but the image didn\'t. Watch the pod name hashes change.',
-    hints:['<code>kubectl rollout restart deployment web</code>'],
+    hints:['Still the <code>rollout</code> family — the subcommand that <i>recreates</i> the pods without changing the image.'],
     check:function(h,cl){ var d=cl.deployments.find(function(x){return x.name==='web';}); return d && d.restarted===true; } },
   { id:'m12', title:'Expose a deployment as a Service', icon:'🔌',
     task:'The <code>worker</code> deployment has no Service. Create one with <b>expose</b> on port <b>80</b>.',
     eli5:'A Service gives pods a stable address and load-balances across them via a label selector. <code>expose</code> is the quick imperative way to create one from a deployment.',
-    hints:['<code>kubectl expose deployment worker --port=80</code>'],
+    hints:['The quick imperative route is the <code>expose</code> verb on the <code>worker</code> deployment; remember to set the <code>--port</code>.'],
     check:function(h,cl){ return cl.services.some(function(s){return s.name==='worker';}); } },
   { id:'m13', title:'Filter with a label selector', icon:'🏷️',
     task:'List only the pods belonging to the web app using a <b>label selector</b> (<code>app=web</code>).',
     eli5:'Labels + selectors are how everything in K8s finds everything else. <code>-l app=web</code> filters to just the matching pods — the same mechanism a Service uses.',
-    hints:['<code>kubectl get pods -l app=web</code>'],
+    hints:['There\'s a one-letter flag for <b>label selectors</b> — pair it with the <code>app=web</code> label to filter the pod list.'],
     check:function(h){ return h.some(function(c){ return /get\s+(pods?|po)\b/.test(c) && /-l\s+app=web/.test(c); }); } },
   { id:'m14', title:'Delete a pod & watch self-healing', icon:'♻️',
     task:'Delete one of the <code>web-*</code> pods. Then run <code>kubectl get pods</code> again and notice a replacement appears.',
     eli5:'A pod owned by a Deployment is disposable. Delete one and the ReplicaSet notices actual &lt; desired and creates a fresh pod. This is reconciliation you can see with your own eyes.',
-    hints:['<code>kubectl delete pod web-6d8f4c9b7-aa1k2</code>','then <code>kubectl get pods</code>'],
-    check:function(h,cl){ return cl._deletedWebPod===true; } }
+    hints:['Two steps: <code>delete</code> one specific <code>web-</code> pod (use a real name from the list), then list pods again and watch a replacement appear.'],
+    check:function(h,cl){ return cl._deletedWebPod===true; } },
+
+  /* ───────── Interview-style scenarios: diagnose & fix-the-manifest ───────── */
+  { id:'sc1', title:'Diagnose the un-schedulable pod', icon:'🧭',
+    task:'The <code>batch-report-*</code> pod is stuck <b>Pending</b>. Investigate <i>why</i> it can\'t be scheduled — surface the reason (you don\'t need to fix it).',
+    eli5:'Pending means no node would take the pod. The scheduler records the reason as an <b>Event</b> on the pod — the same place you look for most "why won\'t this start" questions.',
+    hints:['Pending = the scheduler couldn\'t place it anywhere. Where does it record <i>why</i>?',
+           'The reason is an Event on the pod itself — reach for the verb that shows a resource\'s full detail and Events.',
+           'Describe the <code>batch-report-</code> pod and read the Events at the bottom — here it\'s "Insufficient memory".'],
+    check:function(h){ return h.some(function(c){ return /describe\s+(pod|po)\s+batch-report/.test(c); }); } },
+
+  { id:'mf1', title:'Fix the broken Deployment YAML', icon:'🩹', type:'manifest',
+    task:'This <code>frontend</code> Deployment is invalid and manages no pods. <b>Edit the manifest</b> to fix it, then apply.',
+    eli5:'A Deployment finds "its" pods through <code>spec.selector.matchLabels</code>. If that selector doesn\'t match the labels on the pod template (<code>spec.template.metadata.labels</code>), it owns nothing — and the API rejects it.',
+    hints:['How does a Deployment know which pods belong to it? Two places in this file have to agree.',
+           'Compare <code>spec.selector.matchLabels</code> with <code>spec.template.metadata.labels</code> — do their <code>app:</code> values match?',
+           'Make them identical — set both <code>app:</code> values the same (e.g. both <code>frontend</code>).'],
+    manifest:`apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:1.27`,
+    validate:function(doc){
+      if(!doc || doc.kind!=='Deployment') return {ok:false,msg:'<code>kind</code> should be <code>Deployment</code>.'};
+      var sp=doc.spec||{}; var sel=((sp.selector||{}).matchLabels||{}).app; var tpl=(((sp.template||{}).metadata||{}).labels||{}).app;
+      if(sel==null||tpl==null) return {ok:false,msg:'both the <code>selector.matchLabels</code> and the template <code>labels</code> need an <code>app</code> entry.'};
+      if(sel!==tpl) return {ok:false,msg:'the selector (<code>'+sel+'</code>) still doesn\'t match the pod template label (<code>'+tpl+'</code>). A Deployment can only manage pods its selector matches.'};
+      var c=(((sp.template||{}).spec||{}).containers||[])[0];
+      if(!c||!c.image) return {ok:false,msg:'the container still needs an <code>image</code>.'};
+      return {ok:true,msg:'selector and template labels match — the Deployment is valid and will manage its pods.'};
+    } },
+
+  { id:'mf2', title:'Make the Service reachable', icon:'🔌', type:'manifest',
+    task:'The <code>api</code> pods are healthy, but <code>api-svc</code> sends them no traffic. <b>Fix the Service</b> so it reaches the api pods (which listen on port <b>8080</b>), then apply.',
+    eli5:'A Service routes by <b>label selector</b> and forwards to a <b>targetPort</b> on the pod. If the selector matches no pods — or the targetPort is wrong — requests go nowhere even though the pods are fine.',
+    hints:['Two things decide whether a Service reaches pods: <i>which</i> pods it selects, and <i>which port</i> it forwards to. Check both.',
+           'The api pods are labelled <code>app: api</code> — does the Service\'s <code>selector</code> match? And the container listens on 8080 — does <code>targetPort</code>?',
+           'Set <code>spec.selector.app</code> to <code>api</code> and <code>spec.ports[0].targetPort</code> to <code>8080</code>.'],
+    manifest:`apiVersion: v1
+kind: Service
+metadata:
+  name: api-svc
+spec:
+  selector:
+    app: api-v2
+  ports:
+    - port: 80
+      targetPort: 80`,
+    validate:function(doc){
+      if(!doc||doc.kind!=='Service') return {ok:false,msg:'<code>kind</code> should be <code>Service</code>.'};
+      var sp=doc.spec||{}; var selApp=(sp.selector||{}).app;
+      if(selApp!=='api') return {ok:false,msg:'the selector (<code>app: '+selApp+'</code>) matches no pods. The api pods are labelled <code>app: api</code>.'};
+      var port=(sp.ports||[])[0]||{};
+      if(port.targetPort!==8080) return {ok:false,msg:'selector is right, but traffic still hits the wrong container port. The api listens on <code>8080</code> — set <code>targetPort</code> to 8080.'};
+      return {ok:true,msg:'selector matches the api pods and targetPort 8080 reaches the container — it\'s reachable now.'};
+    },
+    apply:function(doc,cl){ var port=(doc.spec.ports||[])[0]||{}; var ex=cl.services.find(function(s){return s.name==='api-svc';}); if(ex){ ex.selector={app:'api'}; ex.ports=(port.port||80)+'/TCP'; } else { cl.services.push({name:'api-svc',ns:'default',type:'ClusterIP',clusterIP:'10.96.55.7',ports:(port.port||80)+'/TCP',selector:{app:'api'},age:'1s'}); } } },
+
+  { id:'mf3', title:'Expose the worker with a Service', icon:'🌐', type:'manifest',
+    task:'The <code>worker</code> deployment has no Service. <b>Complete the Service manifest</b> so it targets the worker pods on port <b>80</b>, then apply.',
+    eli5:'To give a set of pods a stable address, you create a Service whose <code>selector</code> matches the pods\' labels and whose <code>ports</code> say which port to serve. The worker pods are labelled <code>app: worker</code>.',
+    hints:['A Service needs a <code>kind</code>, a <code>selector</code> that matches the target pods, and at least one <code>ports</code> entry.',
+           'The worker pods carry <code>app: worker</code> — your <code>spec.selector</code> must match that label.',
+           'Fill in <code>spec.selector.app: worker</code> and a port under <code>spec.ports</code> (e.g. <code>- port: 80</code>).'],
+    manifest:`apiVersion: v1
+kind: Service
+metadata:
+  name: worker-svc
+spec:
+  selector:
+    app:        # which pods should this target?
+  ports:
+    - port:     # which port should it serve?`,
+    validate:function(doc){
+      if(!doc||doc.kind!=='Service') return {ok:false,msg:'<code>kind</code> should be <code>Service</code>.'};
+      var sp=doc.spec||{}; var selApp=(sp.selector||{}).app;
+      if(selApp!=='worker') return {ok:false,msg:'the selector must target the worker pods: set <code>spec.selector.app</code> to <code>worker</code>.'};
+      var port=(sp.ports||[])[0]||{};
+      if(!port.port) return {ok:false,msg:'add a <code>port</code> under <code>spec.ports</code> (e.g. <code>- port: 80</code>).'};
+      return {ok:true,msg:'a Service selecting <code>app=worker</code> on port '+port.port+' — the worker is exposed.'};
+    },
+    apply:function(doc,cl){ if(!cl.services.some(function(s){return s.name==='worker-svc';})){ var port=(doc.spec.ports||[])[0]||{}; cl.services.push({name:'worker-svc',ns:'default',type:'ClusterIP',clusterIP:'10.96.61.9',ports:(port.port||80)+'/TCP',selector:{app:'worker'},age:'1s'}); } } },
+
+  { id:'mf4', title:'Fix the failing rollout (bad image)', icon:'🛠️', type:'manifest',
+    task:'A teammate\'s edit broke the <code>web</code> rollout — new pods can\'t start. <b>Fix the image</b> in this manifest, then apply.',
+    eli5:'A rollout stalls when new pods can\'t pull their image — usually a typo or a tag that doesn\'t exist. The new pods sit in <code>ImagePullBackOff</code> while the old ones keep serving. The fix is to correct the image reference.',
+    hints:['New pods are stuck pulling an image. Where in a Deployment is the image set — and does this tag look real?',
+           'Look at the container\'s <code>image:</code> — <code>nginx:1.27-broken</code> isn\'t a tag that exists.',
+           'Point it at a real tag, e.g. <code>nginx:1.27</code> or <code>nginx:1.28</code>.'],
+    manifest:`apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: web
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:1.27-broken`,
+    validate:function(doc){
+      if(!doc||doc.kind!=='Deployment') return {ok:false,msg:'<code>kind</code> should be <code>Deployment</code>.'};
+      var c=((((doc.spec||{}).template||{}).spec||{}).containers||[])[0]||{}; var img=c.image||'';
+      if(img===''||/-broken|ngnix|typo/.test(img)) return {ok:false,msg:'that image still won\'t pull. Use a real <code>nginx</code> tag.'};
+      if(!/^nginx:1\.(2[5-9]|3\d)$/.test(img)) return {ok:false,msg:'use a valid nginx tag like <code>nginx:1.27</code> or <code>nginx:1.28</code>.'};
+      return {ok:true,msg:'image <code>'+img+'</code> is a valid tag — the rollout can finish.'};
+    },
+    apply:function(doc,cl){ var d=cl.deployments.find(function(x){return x.name==='web';}); var c=((((doc.spec||{}).template||{}).spec||{}).containers||[])[0]||{}; if(d&&c.image){ d.image=c.image; cl.pods.forEach(function(p){ if(p.app==='web') p.image=c.image; }); } } },
+
+  { id:'mf5', title:'Add resource requests & limits', icon:'📦', type:'manifest',
+    task:'Pods with no resource requests can\'t be scheduled fairly or autoscaled on CPU. <b>Add CPU & memory <code>requests</code> and <code>limits</code></b> to this container, then apply.',
+    eli5:'<code>requests</code> are what the scheduler reserves for a pod (its guaranteed floor); <code>limits</code> are the ceiling it may use. The HPA also needs CPU <code>requests</code> to compute utilisation as a percentage.',
+    hints:['Containers declare their needs under a <code>resources:</code> block, split into <code>requests</code> and <code>limits</code>.',
+           'Both <code>requests</code> and <code>limits</code> should set a <code>cpu</code> and a <code>memory</code> value.',
+           'Under the container add:  <code>resources:</code> → <code>requests:</code> (<code>cpu: 100m</code>, <code>memory: 128Mi</code>) and <code>limits:</code> (<code>cpu: 500m</code>, <code>memory: 256Mi</code>) — as nested, indented keys.'],
+    manifest:`apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: api
+  template:
+    metadata:
+      labels:
+        app: api
+    spec:
+      containers:
+        - name: api
+          image: acme/api:2.4
+          # add a resources block here (requests + limits)`,
+    validate:function(doc){
+      if(!doc||doc.kind!=='Deployment') return {ok:false,msg:'<code>kind</code> should be <code>Deployment</code>.'};
+      var c=((((doc.spec||{}).template||{}).spec||{}).containers||[])[0]||{}; var r=c.resources;
+      if(!r||!r.requests) return {ok:false,msg:'add a <code>resources.requests</code> block to the container.'};
+      if(!r.requests.cpu||!r.requests.memory) return {ok:false,msg:'<code>requests</code> needs both <code>cpu</code> and <code>memory</code>.'};
+      if(!r.limits||!r.limits.cpu||!r.limits.memory) return {ok:false,msg:'requests look good — now add <code>limits</code> with <code>cpu</code> and <code>memory</code> too.'};
+      return {ok:true,msg:'requests and limits set — the scheduler and HPA now have what they need.'};
+    } }
 ];
 
 /* ════════════ kubectl ENGINE ════════════ */
@@ -2229,28 +2556,28 @@ function describeSvc(cl,s){
 var PY_EX = [
   { id:'pe1', level:'Warm-up', title:'Count error lines in a log',
     prompt:'Logs are just lines of text. The most common first task: <b>count how many lines contain a keyword</b>. Implement <code>count_errors(lines)</code> to return how many strings in the list <code>lines</code> contain the substring <code>"ERROR"</code>.',
-    eli5:'You\'re flipping through a stack of notes and tallying every one that says "ERROR". A loop with an <code>if "ERROR" in line</code> does exactly that. The one-line Pythonic way uses <code>sum(...)</code> over a generator.',
+    eli5:'You\'re flipping through a stack of notes and tallying every one that mentions "ERROR". That\'s a count: look at each line, decide yes or no, and add up the yeses.',
     starter:'def count_errors(lines):\n    # lines: a list of log strings\n    # return the number of lines containing "ERROR"\n    count = 0\n    # your code here\n    return count\n',
     solution:'def count_errors(lines):\n    return sum(1 for line in lines if "ERROR" in line)\n',
     test:'assert count_errors(["x ERROR y", "ok", "ERROR!"]) == 2\nassert count_errors([]) == 0\nassert count_errors(["info", "warn"]) == 0\nassert count_errors(["ERROR","ERROR","ERROR"]) == 3' },
 
   { id:'pe2', level:'Warm-up', title:'Count requests per status code',
     prompt:'Given a list of HTTP status codes (ints), build a dict mapping <b>each code → how many times it appeared</b>. Implement <code>status_counts(codes)</code>.',
-    eli5:'Imagine sorting a pile of receipts into labeled bins — one bin per status code — and counting each bin. A dict is your set of bins. <code>d.get(code, 0) + 1</code> means "current count, or 0 if new, plus one".',
+    eli5:'Imagine sorting receipts into labelled bins — one bin per status code — and counting each bin. A dict is your set of bins, keyed by the code; you bump a code\'s tally each time you see it.',
     starter:'def status_counts(codes):\n    # codes: list of ints like [200, 200, 500]\n    # return {code: count}\n    counts = {}\n    # your code here\n    return counts\n',
     solution:'def status_counts(codes):\n    counts = {}\n    for code in codes:\n        counts[code] = counts.get(code, 0) + 1\n    return counts\n',
     test:'assert status_counts([200,200,500]) == {200:2, 500:1}\nassert status_counts([]) == {}\nassert status_counts([404]) == {404:1}\nassert status_counts([200,500,500,500]) == {200:1, 500:3}' },
 
   { id:'pe3', level:'Core', title:'Count unique IP addresses',
     prompt:'Each log line starts with an IP, like <code>"10.0.0.5 - GET /"</code>. Return how many <b>distinct</b> IPs appear. Implement <code>unique_ips(lines)</code>.',
-    eli5:'You want the number of <i>different</i> visitors, not total visits. A <b>set</b> automatically throws away duplicates — add every IP to a set, then its size is your answer. The IP is the first word of each line (<code>line.split()[0]</code>).',
+    eli5:'You want the number of <i>different</i> visitors, not total visits — duplicates shouldn\'t count twice. Think about which built-in collection refuses to store the same value more than once.',
     starter:'def unique_ips(lines):\n    # each line looks like: "10.0.0.5 - GET /path"\n    # return the count of distinct IP addresses\n    ips = set()\n    # your code here\n    return len(ips)\n',
     solution:'def unique_ips(lines):\n    ips = set()\n    for line in lines:\n        ips.add(line.split()[0])\n    return len(ips)\n',
     test:'assert unique_ips(["10.0.0.5 - GET /", "10.0.0.5 - POST /x", "10.0.0.9 - GET /"]) == 2\nassert unique_ips([]) == 0\nassert unique_ips(["1.1.1.1 - GET /"]) == 1' },
 
   { id:'pe4', level:'Core', title:'Compute an error budget',
     prompt:'Given an SLO as a percentage and a time window in minutes, return the <b>allowed downtime</b> in minutes (the error budget). Implement <code>budget_minutes(slo_percent, window_minutes)</code>. Example: a 99.9% SLO over 43200 min (~30 days) allows 43.2 minutes.',
-    eli5:'If you promise to be up 99.9% of the time, you\'re <i>allowed</i> to be down 0.1% of the time. So the budget is <code>(100 - slo) / 100 × window</code>. That leftover slice is the downtime you can "spend" without breaking your goal.',
+    eli5:'If you promise to be up 99.9% of the time, you\'re <i>allowed</i> to be down the leftover fraction of the time. The budget is that small leftover slice of the whole window — the downtime you can "spend" without breaking your goal.',
     starter:'def budget_minutes(slo_percent, window_minutes):\n    # slo_percent like 99.9 ; window_minutes like 43200\n    # return allowed downtime in minutes (a float)\n    # your code here\n    return 0\n',
     solution:'def budget_minutes(slo_percent, window_minutes):\n    return (100 - slo_percent) / 100 * window_minutes\n',
     test:'assert abs(budget_minutes(99.9, 43200) - 43.2) < 1e-6\nassert abs(budget_minutes(99, 43200) - 432) < 1e-6\nassert abs(budget_minutes(100, 43200) - 0) < 1e-6\nassert abs(budget_minutes(99.99, 43200) - 4.32) < 1e-6' },
@@ -2264,25 +2591,37 @@ var PY_EX = [
 
   { id:'pe6', level:'Core', title:'Parse JSON and total the replicas',
     prompt:'An API returns JSON text describing deployments. Parse it and return the <b>sum of every deployment\'s <code>replicas</code></b>. Implement <code>total_replicas(json_str)</code>. The JSON looks like <code>{"items": [{"name": "web", "replicas": 3}, ...]}</code>.',
-    eli5:'JSON is just text shaped like Python dicts/lists. <code>json.loads(text)</code> turns it into real dicts and lists you can index. Then it\'s a normal loop adding up a field — same as totaling a column in a spreadsheet.',
+    eli5:'JSON text is just dicts and lists in disguise. Turn the text into real Python objects first, then it\'s an ordinary "add up one field across a list" task — like totalling a column in a spreadsheet.',
     starter:'import json\n\ndef total_replicas(json_str):\n    data = json.loads(json_str)\n    # data["items"] is a list of dicts, each with a "replicas" key\n    # your code here\n    return 0\n',
     solution:'import json\n\ndef total_replicas(json_str):\n    data = json.loads(json_str)\n    return sum(item["replicas"] for item in data["items"])\n',
     test:'assert total_replicas(\'{"items":[{"name":"web","replicas":3},{"name":"api","replicas":2}]}\') == 5\nassert total_replicas(\'{"items":[]}\') == 0\nassert total_replicas(\'{"items":[{"name":"x","replicas":10}]}\') == 10' },
 
   { id:'pe7', level:'Advanced', title:'Retry a flaky call with backoff',
     prompt:'Implement <code>call_with_retry(fn, attempts)</code>: call <code>fn()</code>, and if it raises an exception, try again — up to <code>attempts</code> times total. Return the result on the first success. If all attempts fail, <b>re-raise</b> the last exception. (Skip the real <code>sleep</code> here so tests run fast — focus on the control flow.)',
-    eli5:'Knocking on a door that sometimes doesn\'t open. You knock again, a few times, before giving up. The pattern: a loop wrapped in <code>try/except</code>; on success you return immediately; on the final failed knock you let the error through (<code>raise</code>). In real life you\'d <code>time.sleep</code> a growing delay between knocks.',
+    eli5:'Knocking on a door that sometimes sticks: you try again a few times, and only give up — letting the error through — after the last attempt fails. (In real life you\'d also sleep a growing delay between knocks.)',
     starter:'def call_with_retry(fn, attempts):\n    # call fn(); on exception, retry up to `attempts` times total.\n    # return fn() on success; if all fail, re-raise the last exception.\n    last = None\n    for i in range(attempts):\n        # your code here\n        pass\n    raise last\n',
     solution:'def call_with_retry(fn, attempts):\n    last = None\n    for i in range(attempts):\n        try:\n            return fn()\n        except Exception as e:\n            last = e\n    raise last\n',
     test:'# fails twice then succeeds\nstate = {"n": 0}\ndef flaky():\n    state["n"] += 1\n    if state["n"] < 3:\n        raise ValueError("boom")\n    return "ok"\nassert call_with_retry(flaky, 5) == "ok"\nassert state["n"] == 3\n# always fails -> should raise\ndef always_fail():\n    raise RuntimeError("nope")\ntry:\n    call_with_retry(always_fail, 3)\n    assert False, "should have raised"\nexcept RuntimeError:\n    pass' },
 
   { id:'pe8', level:'Advanced', title:'Find the unhealthy pods',
     prompt:'You\'re given a list of pod dicts (like parsed <code>kubectl get pods -o json</code>). Return the <b>names</b> of pods that are NOT healthy — i.e. <code>status != "Running"</code> OR <code>ready</code> is <code>False</code>. Implement <code>unhealthy(pods)</code>.',
-    eli5:'Walk down the roster and write down anyone who\'s either "not at their post" (status isn\'t Running) or "present but not ready" (ready is False). A list comprehension with an <code>or</code> condition reads almost like that English sentence.',
+    eli5:'Walk the roster and note anyone who\'s either "not at their post" (status isn\'t Running) or "present but not ready". You\'re filtering the list down to the names that match that condition.',
     starter:'def unhealthy(pods):\n    # pods: list of {"name": str, "status": str, "ready": bool}\n    # return list of names where status != "Running" OR ready is False\n    # your code here\n    return []\n',
     solution:'def unhealthy(pods):\n    return [p["name"] for p in pods\n            if p["status"] != "Running" or not p["ready"]]\n',
     test:'pods = [\n  {"name":"web-1","status":"Running","ready":True},\n  {"name":"api-1","status":"CrashLoopBackOff","ready":False},\n  {"name":"web-2","status":"Running","ready":False},\n  {"name":"cache-0","status":"ImagePullBackOff","ready":False},\n]\nassert unhealthy(pods) == ["api-1","web-2","cache-0"]\nassert unhealthy([]) == []\nassert unhealthy([{"name":"ok","status":"Running","ready":True}]) == []' }
 ];
+
+/* Progressive hints for the Python Lab — guide thinking, never the full solution (use the 💡 Solution button for that) */
+var PY_HINTS = {
+  pe1:['You need to look at every line and count the ones that match a condition.','Testing whether a substring is inside a string uses Python\'s <code>in</code> operator.','Loop with a counter, or <code>sum</code> a <code>1</code> for each matching line — either works.'],
+  pe2:['You\'re building a dict: the key is the status code, the value is how many times you\'ve seen it.','As you walk the list you need the current tally for a code — but the key might not exist yet.','<code>dict.get(key, 0)</code> returns 0 for an unseen key, so you can add one and store it back.'],
+  pe3:['Which Python collection stores each value at most once?','The IP is the first token of each line — splitting on whitespace gives you the pieces.','Add each line\'s first token to a <code>set</code>, then the answer is its length.'],
+  pe4:['What fraction of the time are you allowed to be <i>down</i> at a 99.9% SLO?','That down-fraction is <code>(100 - slo)</code>, expressed as a fraction of 1.','Multiply the down-fraction by the window length in minutes.'],
+  pe5:['Percentiles are about position in <i>sorted</i> order, so sort the values first.','Nearest-rank: the rank is p% of the count, rounded up — think <code>math.ceil(p/100 * n)</code>.','That rank is 1-based; subtract 1 for the list index, and clamp it into range before indexing.'],
+  pe6:['The input is a JSON <i>string</i> — which standard module turns that into Python objects?','<code>json.loads()</code> parses it; then <code>data["items"]</code> is a list of dicts.','Sum the <code>replicas</code> field across every item in that list.'],
+  pe7:['You\'ll loop up to <code>attempts</code> times, trying the call on each pass.','Wrap the call in <code>try/except</code>: on success, return immediately; on failure, remember the error and continue.','After the loop — meaning every attempt failed — re-raise the last exception you stored.'],
+  pe8:['You\'re selecting the pods that fail a health check and returning their <i>names</i>.','The failing condition is: status is not "Running" <b>or</b> ready is False.','A list comprehension over the pods with that <code>if</code> condition, collecting <code>p["name"]</code>, does it in one line.']
+};
 </script>
 <!-- DATA: INTERVIEW -->
 <script id="data-interview">
@@ -2507,6 +2846,7 @@ function renderDashboard(){
     + pathCard('python','python','var(--python)','python','Python Lab','Write and <strong>actually run</strong> Python for SRE tasks: parsing logs, retries, SLOs, calling APIs. Tests check your work.', pp)
     + simpleCard('interview','chat','var(--accent2)','Interview Prep','Flashcards, scenario questions, and rapid-fire mode across every topic — with model answers you can study from.')
     + simpleCard('cheat','list','var(--sre)','Cheatsheets','Fast reference for kubectl, Docker, Terraform, YAML manifests, and Python snippets — the night before the interview.')
+    + masterCard()
     + '</div>';
 
   // 2-week plan preview
@@ -2537,6 +2877,24 @@ function simpleCard(view,icon,color,name,desc){
     + '<div class="card-name">'+name+'</div></div>'
     + '<div class="card-desc" style="margin-bottom:0">'+desc+'</div></div>';
 }
+function masterCard(){
+  var unlocked=learningDone(), r=state.quizScores['master'];
+  var passed=r && r.total>0 && (r.correct/r.total)>=MASTER_PASS;
+  var secDone=sectionsPassedCount(), secTotal=quizSections().length;
+  var meta = passed ? 'Passed ✓ · best '+r.correct+'/'+r.total
+           : r ? 'Best '+r.correct+'/'+r.total
+           : unlocked ? 'Unlocked — take it' : 'Locked';
+  var desc = unlocked
+    ? 'A '+MASTER_SHOW+'-question gauntlet drawn from <strong>every section</strong>. Pass at '+Math.round(MASTER_PASS*100)+'%. Each attempt is a fresh mix.'
+    : 'Unlocks after you read all lessons (<strong>'+lessonsDoneCount()+'/'+lessonCount()+'</strong>) and pass every section quiz (<strong>'+secDone+'/'+secTotal+'</strong>).';
+  return '<div class="card click master-card'+(unlocked?'':' locked')+'" onclick="openMaster()">'
+    + '<div class="card-top"><div class="card-ico" style="background:var(--sre)">'+ICON.master+'</div>'
+    + '<div><div class="card-name">Master Challenge</div><div class="card-meta">'+meta+'</div></div></div>'
+    + '<div class="card-desc">'+desc+'</div>'
+    + (r ? '<div class="bar"><i style="width:'+Math.round(r.correct/r.total*100)+'%"></i></div>' : '')
+    + '</div>';
+}
+function openMaster(){ state.curLesson='quiz-master'; save(); showView('learn'); }
 function togglePlan(i){ state.planDone[i]=!state.planDone[i]; save(); renderDashboard(); }
 
 /* ═══════════════ LEARN ═══════════════ */
@@ -2551,24 +2909,37 @@ function renderLearn(){
         + '<span class="les-check'+(done?' done':'')+'">'+(done?'✓':'')+'</span>'
         + '<span>'+l.title+'</span></div>';
     });
+    if((QUIZZES[m.id]||[]).length){
+      var qid='quiz-'+m.id; var r=state.quizScores[m.id];
+      var passed=r && r.total>0 && (r.correct/r.total)>=0.7;
+      side += '<div class="les-item quiz-item'+(qid===state.curLesson?' active':'')+'" onclick="openLesson(\''+qid+'\')">'
+        + '<span class="les-check'+(passed?' done':'')+'">'+(passed?'✓':'?')+'</span>'
+        + '<span>Section quiz</span>'
+        + (r?'<span class="quiz-score-badge">'+r.correct+'/'+r.total+'</span>':'')
+        + '</div>';
+    }
     side += '</div>';
   });
   side += '</div>';
 
-  var lesson = findLesson(state.curLesson);
   var main = '<div class="lesson">';
-  if(lesson){
-    var mod = lessonModule(state.curLesson);
-    main += '<div style="margin-bottom:.4rem"><span class="pill '+mod.pill+'">'+mod.name+'</span></div>';
-    main += '<h2>'+lesson.title+'</h2>';
-    main += lesson.html;
-    var done = !!state.lessonsDone[lesson.id];
-    main += '<div class="lesson-foot">'
-      + '<button class="btn btn-ghost btn-sm" onclick="navLesson(-1)">← Previous</button>'
-      + '<button class="btn '+(done?'btn-ghost':'btn-primary')+'" onclick="markLesson(\''+lesson.id+'\')">'+(done?'✓ Completed':'Mark as read')+'</button>'
-      + '<button class="btn btn-ghost btn-sm" onclick="navLesson(1)">Next →</button>'
-      + '</div>';
-  } else { main += '<div class="empty">No lessons yet.</div>'; }
+  if(isQuizId(state.curLesson)){
+    main += renderQuizBody(quizModuleId(state.curLesson));
+  } else {
+    var lesson = findLesson(state.curLesson);
+    if(lesson){
+      var mod = lessonModule(state.curLesson);
+      main += '<div style="margin-bottom:.4rem"><span class="pill '+mod.pill+'">'+mod.name+'</span></div>';
+      main += '<h2>'+lesson.title+'</h2>';
+      main += lesson.html;
+      var done = !!state.lessonsDone[lesson.id];
+      main += '<div class="lesson-foot">'
+        + '<button class="btn btn-ghost btn-sm" onclick="navLesson(-1)">← Previous</button>'
+        + '<button class="btn '+(done?'btn-ghost':'btn-primary')+'" onclick="markLesson(\''+lesson.id+'\')">'+(done?'✓ Finished':'Mark finished')+'</button>'
+        + '<button class="btn btn-ghost btn-sm" onclick="navLesson(1)">Next →</button>'
+        + '</div>';
+    } else { main += '<div class="empty">No lessons yet.</div>'; }
+  }
   main += '</div>';
 
   document.getElementById('learn').innerHTML = '<div class="learn-layout">'+side+main+'</div>';
@@ -2576,7 +2947,7 @@ function renderLearn(){
 function firstLesson(){ return LEARN[0] && LEARN[0].lessons[0]; }
 function findLesson(id){ var r=null; LEARN.forEach(function(m){ m.lessons.forEach(function(l){ if(l.id===id) r=l; }); }); return r; }
 function lessonModule(id){ var r=null; LEARN.forEach(function(m){ m.lessons.forEach(function(l){ if(l.id===id) r=m; }); }); return r||{name:'',pill:'muted'}; }
-function flatLessons(){ var a=[]; LEARN.forEach(function(m){ m.lessons.forEach(function(l){ a.push(l.id); }); }); return a; }
+function flatLessons(){ var a=[]; LEARN.forEach(function(m){ m.lessons.forEach(function(l){ a.push(l.id); }); if((QUIZZES[m.id]||[]).length) a.push('quiz-'+m.id); }); return a; }
 function openLesson(id){ state.curLesson=id; save(); renderLearn(); window.scrollTo({top:0,behavior:'smooth'}); }
 function markLesson(id){ state.lessonsDone[id]=!state.lessonsDone[id]; save(); renderLearn(); if(state.lessonsDone[id]) showToast('✓ Lesson complete'); }
 function navLesson(dir){
@@ -2595,19 +2966,199 @@ function cqPick(btn, idx){
   var ex = box.querySelector('.cq-explain'); if(ex) ex.style.display='block';
 }
 
-/* ═══════════════ CHEATSHEET ═══════════════ */
-function renderCheat(){
-  var h='<div class="hero"><h1>Cheatsheets</h1><p>Quick reference for the night before — and during practice. Commands you should be able to recall cold.</p></div>';
-  h+='<div class="cheat-cols">';
-  CHEATS.forEach(function(c){
-    h+='<div class="cheat-card"><h3><span style="color:'+c.color+'">'+ICON[c.icon]+'</span>'+c.title+'</h3>';
-    c.rows.forEach(function(r){
-      h+='<div class="cheat-row"><div class="cheat-cmd">'+r[0]+'</div><div class="cheat-desc">'+r[1]+'</div></div>';
+/* ═══════════════ SECTION QUIZZES + MASTER CHALLENGE ═══════════════ */
+var QUIZ_SHOW = 4;       // questions per section-quiz attempt (sampled from the pool)
+var MASTER_SHOW = 12;    // questions per Master Challenge attempt (sampled across all sections)
+var SECTION_PASS = 0.7, MASTER_PASS = 0.8;
+var quizInst = {};       // mid -> {qs:[...], srcKeys:[...]}  (runtime only, not persisted)
+
+function isQuizId(id){ return typeof id==='string' && id.indexOf('quiz-')===0; }
+function quizModuleId(id){ return id.slice(5); }
+function shuffleArr(a){ a=a.slice(); for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t; } return a; }
+function lessonsAllRead(){ var d=true; LEARN.forEach(function(m){ m.lessons.forEach(function(l){ if(!state.lessonsDone[l.id]) d=false; }); }); return d; }
+function sectionQuizPassed(mid){ var r=state.quizScores[mid]; return !!(r && r.total>0 && (r.correct/r.total)>=SECTION_PASS); }
+function quizSections(){ return LEARN.filter(function(m){ return (QUIZZES[m.id]||[]).length; }); }
+function sectionsPassedCount(){ var n=0; quizSections().forEach(function(m){ if(sectionQuizPassed(m.id)) n++; }); return n; }
+// Master Challenge unlocks only after every lesson is read AND every section quiz is passed
+function learningDone(){ return lessonsAllRead() && sectionsPassedCount()===quizSections().length; }
+function masterPool(){ var pool=[]; LEARN.forEach(function(m){ (QUIZZES[m.id]||[]).forEach(function(q){ pool.push({src:q, topic:m.name, pill:m.pill}); }); }); return pool; }
+
+function buildQuizInstance(mid){
+  var isMaster = (mid==='master');
+  var raw, show;
+  if(isMaster){ raw = masterPool(); show = Math.min(MASTER_SHOW, raw.length); }
+  else { raw = (QUIZZES[mid]||[]).map(function(q){ return {src:q, topic:null, pill:null}; }); show = Math.min(QUIZ_SHOW, raw.length); }
+  var keyed = raw.map(function(item,i){ return {i:i, key:(item.topic||mid)+'|'+item.src.q}; });
+  var prev = (quizInst[mid] && quizInst[mid].srcKeys) || [];
+  var unseen = shuffleArr(keyed.filter(function(k){ return prev.indexOf(k.key)===-1; }));
+  var chosen = unseen.slice(0, show);
+  if(chosen.length < show){ // not enough fresh — top up from the rest (a wrap-around)
+    var rest = shuffleArr(keyed.filter(function(k){ return chosen.indexOf(k)===-1; }));
+    while(chosen.length < show && rest.length) chosen.push(rest.shift());
+  }
+  chosen = shuffleArr(chosen);
+  var qs = chosen.map(function(c){
+    var item = raw[c.i], src = item.src;
+    var order = shuffleArr(src.opts.map(function(_,i){ return i; }));
+    return { q:src.q, opts:order.map(function(o){ return src.opts[o]; }),
+             whys:order.map(function(o){ return (src.whys && src.whys[o]) || ''; }),
+             correct:order.indexOf(src.correct), explain:src.explain,
+             topic:item.topic, pill:item.pill };
+  });
+  quizInst[mid] = { qs:qs, srcKeys: chosen.map(function(c){ return c.key; }) };
+  return quizInst[mid];
+}
+
+function renderQuizBody(mid){
+  var isMaster = (mid==='master');
+  if(isMaster && !learningDone()) return masterLockedBody();
+  var inst = buildQuizInstance(mid);
+  var qs = inst.qs, prev = state.quizScores[mid];
+  var title, pillCls, pillLbl, intro;
+  if(isMaster){
+    title='Master Challenge'; pillCls='sre'; pillLbl='★ Master Challenge';
+    intro=qs.length+' questions drawn from every section. Aim for '+Math.round(MASTER_PASS*100)+'%+. Each retake pulls a fresh mix.';
+  } else {
+    var mod=null; LEARN.forEach(function(m){ if(m.id===mid) mod=m; });
+    title='Section quiz · '+(mod?mod.name:''); pillCls=mod?mod.pill:'muted'; pillLbl=mod?mod.name:'';
+    intro=qs.length+' questions on what you just covered, drawn from a larger pool — retake for a fresh set. Submit to see your score and explanations.';
+  }
+  var h='<div style="margin-bottom:.4rem"><span class="pill '+pillCls+'">'+pillLbl+'</span></div>';
+  h+='<h2>'+title+'</h2>';
+  h+='<p class="quiz-intro">'+intro+(prev?' <strong>Best so far: '+prev.correct+'/'+prev.total+'.</strong>':'')+'</p>';
+  h+='<div id="quizForm" data-mid="'+mid+'">';
+  qs.forEach(function(qq,qi){
+    h+='<div class="checkq quizq" data-qi="'+qi+'">';
+    if(qq.topic) h+='<div style="margin-bottom:.5rem"><span class="pill '+qq.pill+'" style="font-size:.62rem">'+qq.topic+'</span></div>';
+    h+='<div class="checkq-q">'+(qi+1)+'. '+_esc(qq.q)+'</div>';
+    qq.opts.forEach(function(t,oi){
+      h+='<button class="cq-opt" onclick="quizPick(this,'+qi+','+oi+')"><span class="mk">'+String.fromCharCode(65+oi)+'</span><span>'+_esc(t)+'</span></button>';
     });
+    h+='<div class="cq-explain" style="display:none"><strong>Answer:</strong> '+_esc(qq.explain)+'</div>';
     h+='</div>';
   });
   h+='</div>';
+  h+='<div class="quiz-result" id="quizResult" style="display:none"></div>';
+  h+='<div class="lesson-foot">'
+    + '<button class="btn btn-ghost btn-sm" onclick="'+(isMaster?'showView(\'dashboard\')':'navLesson(-1)')+'">'+(isMaster?'← Dashboard':'← Previous')+'</button>'
+    + '<button class="btn btn-primary" id="quizSubmitBtn" onclick="quizSubmit()">Submit '+(isMaster?'challenge':'quiz')+'</button>'
+    + (isMaster?'':'<button class="btn btn-ghost btn-sm" onclick="navLesson(1)">Next →</button>')
+    + '</div>';
+  return h;
+}
+
+function masterLockedBody(){
+  var total=lessonCount(), done=lessonsDoneCount();
+  var secTotal=quizSections().length, secDone=sectionsPassedCount();
+  var lessonsOk=lessonsAllRead(), quizzesOk=(secDone===secTotal);
+  var h='<div style="margin-bottom:.4rem"><span class="pill sre">★ Master Challenge</span></div>';
+  h+='<h2>Master Challenge</h2>';
+  h+='<div class="master-lock">'
+    + '<div class="master-lock-ico">🔒</div>'
+    + '<p>The Master Challenge pulls questions from <strong>every section</strong> at once. It unlocks once you have <strong>read all the lessons</strong> and <strong>passed every section quiz</strong>.</p>'
+    + '<p class="quiz-intro">'
+    +   (lessonsOk?'✓':'•')+' Lessons read: <strong>'+done+' / '+total+'</strong><br>'
+    +   (quizzesOk?'✓':'•')+' Section quizzes passed: <strong>'+secDone+' / '+secTotal+'</strong>'
+    + '</p>'
+    + '<button class="btn btn-primary" onclick="gotoNextRequirement()">'+(lessonsOk?'Go to a section quiz →':'Continue learning →')+'</button>'
+    + '</div>';
+  h+='<div class="lesson-foot"><button class="btn btn-ghost btn-sm" onclick="showView(\'dashboard\')">← Dashboard</button></div>';
+  return h;
+}
+// Send the learner to the next thing blocking the unlock: an unread lesson first, else an unpassed section quiz
+function gotoNextRequirement(){
+  var arr=flatLessons(), i;
+  for(i=0;i<arr.length;i++){ if(!isQuizId(arr[i]) && !state.lessonsDone[arr[i]]){ openLesson(arr[i]); return; } }
+  var pending=quizSections().filter(function(m){ return !sectionQuizPassed(m.id); });
+  if(pending.length){ openLesson('quiz-'+pending[0].id); return; }
+  showToast('All set — the Master Challenge is unlocked!');
+}
+
+function quizPick(btn, qi, oi){
+  var form=document.getElementById('quizForm'); if(!form || form.dataset.done) return;
+  var box=btn.closest('.quizq'); if(!box) return;
+  box.querySelectorAll('.cq-opt').forEach(function(o){ o.classList.remove('selected'); });
+  btn.classList.add('selected');
+  box.dataset.sel=oi;
+}
+function quizSubmit(){
+  var form=document.getElementById('quizForm'); if(!form || form.dataset.done) return;
+  var mid=form.dataset.mid, inst=quizInst[mid]; if(!inst) return;
+  var boxes=form.querySelectorAll('.quizq');
+  for(var i=0;i<boxes.length;i++){ if(boxes[i].dataset.sel===undefined){ showToast('Answer all '+boxes.length+' questions first'); return; } }
+  var correct=0;
+  boxes.forEach(function(box, qi){
+    var q=inst.qs[qi], ci=q.correct, sel=parseInt(box.dataset.sel,10);
+    var opts=box.querySelectorAll('.cq-opt');
+    opts.forEach(function(o,i){ o.style.pointerEvents='none'; o.classList.remove('selected'); if(i===ci) o.classList.add('correct'); });
+    if(sel===ci){ correct++; }
+    else {
+      if(opts[sel]) opts[sel].classList.add('wrong');
+      var why = q.whys && q.whys[sel];
+      if(why){
+        var w=document.createElement('div'); w.className='cq-why';
+        var b=document.createElement('strong'); b.textContent='Why not '+String.fromCharCode(65+sel)+': ';
+        w.appendChild(b); w.appendChild(document.createTextNode(why));
+        var exEl=box.querySelector('.cq-explain'); box.insertBefore(w, exEl);
+      }
+    }
+    var ex=box.querySelector('.cq-explain'); if(ex) ex.style.display='block';
+  });
+  form.dataset.done='1';
+  var total=boxes.length, isMaster=(mid==='master');
+  state.quizScores[mid]={correct:correct, total:total};
+  save();
+  var pass=(correct/total) >= (isMaster?MASTER_PASS:SECTION_PASS);
+  var res=document.getElementById('quizResult');
+  res.className='quiz-result '+(pass?'pass':'fail');
+  var msg = isMaster
+    ? (pass?'Master Challenge passed — you know this material cold. 🏆':'Not quite. Review the explanations, then retake for a fresh mix.')
+    : (pass?'Nice — section locked in. ✓':'Review the explanations above, then retake for a fresh set.');
+  res.innerHTML='<strong>'+correct+' / '+total+'</strong> &nbsp; '+msg;
+  res.style.display='block';
+  var btn=document.getElementById('quizSubmitBtn');
+  if(btn){ btn.textContent='Retake · new questions'; btn.classList.remove('btn-primary'); btn.classList.add('btn-ghost'); btn.onclick=quizRetake; }
+  showToast((pass?'✓ Passed ':'Scored ')+correct+'/'+total+(isMaster?' · Master Challenge':''));
+}
+function quizRetake(){ renderLearn(); window.scrollTo({top:0,behavior:'smooth'}); }
+
+/* ═══════════════ CHEATSHEET ═══════════════ */
+var cheatQuery='';
+function renderCheat(){
+  var h='<div class="hero"><h1>Cheatsheets</h1><p>Quick reference for the night before — and during practice. Commands you should be able to recall cold.</p></div>';
+  h+='<div class="cheat-search-wrap">'
+    +'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>'
+    +'<input id="cheatSearch" class="cheat-search" type="search" placeholder="Search commands &amp; concepts…" value="'+_esc(cheatQuery).replace(/"/g,'&quot;')+'" oninput="cheatOnSearch(this.value)" autocomplete="off" spellcheck="false">'
+    +'</div>';
+  h+='<div class="cheat-cols" id="cheat-results"></div>';
   document.getElementById('cheat').innerHTML=h;
+  renderCheatResults();
+}
+function cheatOnSearch(q){ cheatQuery=q; renderCheatResults(); }
+function cheatHl(escaped, escQuery){
+  if(!escQuery) return escaped;
+  var re=new RegExp('('+escQuery.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','ig');
+  return escaped.replace(re,'<span class="cheat-hl">$1</span>');
+}
+function renderCheatResults(){
+  var raw=cheatQuery.trim();
+  var ql=raw.toLowerCase();            // match against the original (unescaped) text
+  var hlq=_esc(raw);                   // highlight against the escaped display text
+  var out='', any=false;
+  CHEATS.forEach(function(c){
+    var rows=c.rows.filter(function(r){
+      return !ql || (r[0]+' '+r[1]).toLowerCase().indexOf(ql)!==-1;
+    });
+    if(!rows.length) return;
+    any=true;
+    out+='<div class="cheat-card"><h3><span style="color:'+c.color+'">'+ICON[c.icon]+'</span>'+c.title+'</h3>';
+    rows.forEach(function(r){
+      out+='<div class="cheat-row"><div class="cheat-cmd">'+cheatHl(_esc(r[0]),hlq)+'</div><div class="cheat-desc">'+cheatHl(_esc(r[1]),hlq)+'</div></div>';
+    });
+    out+='</div>';
+  });
+  if(!any) out='<div class="cheat-empty">No matches for &ldquo;'+_esc(raw)+'&rdquo;. Try &ldquo;rollout&rdquo;, &ldquo;logs&rdquo;, &ldquo;probe&rdquo;, or &ldquo;slo&rdquo;.</div>';
+  document.getElementById('cheat-results').innerHTML=out;
 }
 
 /* ═══════════════ kubectl TERMINAL LAB ═══════════════ */
@@ -2625,9 +3176,10 @@ function renderLab(){
   var doneN=missionsDoneCount();
 
   var panel='<div class="mission-panel">'
-    + '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem">'
+    + '<div style="display:flex;justify-content:space-between;align-items:center;gap:.5rem;margin-bottom:.5rem">'
     + '<span class="mission-num">Mission '+(state.curMission+1)+' / '+MISSIONS.length+'</span>'
-    + '<span class="pill ok" style="font-weight:700">'+doneN+' done</span></div>'
+    + '<span style="display:flex;align-items:center;gap:.5rem"><span class="pill ok" style="font-weight:700">'+doneN+' done</span>'
+    + '<button class="btn btn-ghost btn-sm" onclick="labRestart()" title="Rebuild the cluster and clear all mission progress" style="padding:.25rem .6rem;font-size:.7rem">↻ Restart lab</button></span></div>'
     + '<div class="mission-steps">'+MISSIONS.map(function(mm,i){
         var cls='mstep'+(state.missionsDone[mm.id]?' done':'')+(i===state.curMission?' cur':'');
         return '<div class="'+cls+'" title="'+(i+1)+'. '+mm.title.replace(/"/g,'')+'" onclick="labGoMission('+i+')" style="cursor:pointer"></div>';
@@ -2635,22 +3187,34 @@ function renderLab(){
     + '<div class="mission-title">'+m.icon+' '+m.title+'</div>'
     + '<div class="mission-task">'+m.task+'</div>'
     + '<div class="eli5 mission-eli5"><div class="eli5-lbl">🧒 Why</div><p>'+m.eli5+'</p></div>'
-    + '<div class="hintbox"><strong>Hint:</strong><br>'+m.hints.join('<br>')+'</div>'
+    + hintBlock(m.id, m.hints)
     + '<div class="mission-done-banner'+(state.missionsDone[m.id]?' show':'')+'" id="missionBanner">✓ Mission complete! '+(state.curMission<MISSIONS.length-1?'<a href="#" onclick="labGoMission('+(state.curMission+1)+');return false" style="color:inherit;font-weight:700">Next mission →</a>':'You\'ve finished every mission! 🎉')+'</div>'
-    + '<div style="display:flex;gap:.5rem;margin-top:1rem">'
+    + '<div style="display:flex;gap:.5rem;margin-top:1rem;align-items:center">'
     + '<button class="btn btn-ghost btn-sm" onclick="labGoMission('+(state.curMission-1)+')" '+(state.curMission===0?'disabled':'')+'>← Prev</button>'
+    + '<button class="btn '+(state.missionsDone[m.id]?'btn-ghost':'btn-primary')+' btn-sm" onclick="labMarkDone()" style="margin-left:auto">'+(state.missionsDone[m.id]?'✓ Finished':'Mark finished')+'</button>'
     + '<button class="btn btn-ghost btn-sm" onclick="labGoMission('+(state.curMission+1)+')" '+(state.curMission>=MISSIONS.length-1?'disabled':'')+'>Skip →</button>'
     + '</div></div>';
 
-  var termHtml='<div class="terminal">'
-    + '<div class="term-bar"><span class="term-dot" style="background:#ff5f57"></span><span class="term-dot" style="background:#febc2e"></span><span class="term-dot" style="background:#28c840"></span>'
-    + '<span class="term-title">kubectl @ sre-lab-cluster</span>'
-    + '<button class="term-reset" onclick="labReset()">reset cluster</button></div>'
-    + '<div class="term-screen" id="termScreen" onclick="document.getElementById(\'termInput\').focus()"></div>'
-    + '<div class="term-input-row"><span class="ps">$</span><input class="term-input" id="termInput" autocomplete="off" spellcheck="false" placeholder="kubectl get pods" '
-    + 'onkeydown="labKey(event)"></div></div>';
+  var rightHtml;
+  if(m.type==='manifest'){
+    var mcode = labManifestEdit[m.id]!=null ? labManifestEdit[m.id] : m.manifest;
+    rightHtml='<div class="manifest-pane">'
+      + '<div class="manifest-bar"><span>📄 manifest.yaml</span><button class="term-reset" onclick="labResetManifest()">reset manifest</button></div>'
+      + '<textarea class="manifest-editor" id="manifestEditor" spellcheck="false" autocapitalize="off" autocomplete="off" oninput="labManifestOnEdit()">'+escapeHtml(mcode)+'</textarea>'
+      + '<div class="manifest-actions"><button class="btn btn-primary btn-sm" onclick="applyManifest()">▶ kubectl apply -f manifest.yaml</button></div>'
+      + '<div class="manifest-out'+(state.missionsDone[m.id]?' ok':'')+'" id="manifestOut">'+(lastManifestMsg[m.id]||(state.missionsDone[m.id]?'✓ Applied — looks correct!':'Edit the YAML to fix the issue, then apply it.'))+'</div>'
+      + '</div>';
+  } else {
+    rightHtml='<div class="terminal">'
+      + '<div class="term-bar"><span class="term-dot" style="background:#ff5f57"></span><span class="term-dot" style="background:#febc2e"></span><span class="term-dot" style="background:#28c840"></span>'
+      + '<span class="term-title">kubectl @ sre-lab-cluster</span>'
+      + '<button class="term-reset" onclick="labReset()">reset cluster</button></div>'
+      + '<div class="term-screen" id="termScreen" onclick="document.getElementById(\'termInput\').focus()"></div>'
+      + '<div class="term-input-row"><span class="ps">$</span><input class="term-input" id="termInput" autocomplete="off" spellcheck="false" placeholder="kubectl get pods" '
+      + 'onkeydown="labKey(event)"></div></div>';
+  }
 
-  document.getElementById('lab').innerHTML='<div class="lab-layout">'+panel+termHtml+'</div>';
+  document.getElementById('lab').innerHTML='<div class="lab-layout">'+panel+rightHtml+'</div>';
   paintScreen();
   var inp=document.getElementById('termInput'); if(inp) inp.focus();
 }
@@ -2706,10 +3270,24 @@ function labReset(){
   paintScreen();
   var inp=document.getElementById('termInput'); if(inp) inp.focus();
 }
+function labRestart(){
+  if(!confirm('Restart the whole lab? This rebuilds the cluster AND clears your mission progress, sending you back to mission 1.')) return;
+  ensureLab();
+  MISSIONS.forEach(function(m){ delete state.missionsDone[m.id]; delete hintShown[m.id]; });
+  labManifestEdit={}; lastManifestMsg={};
+  state.curMission=0;
+  lab.cluster=makeCluster(); lab.history=[]; labHistIdx=-1;
+  lab.screen=[{c:'term-warn',t:'↻ lab restarted — cluster rebuilt and all mission progress cleared.'},{c:'term-dim',t:''}];
+  save();
+  renderLab();
+  showToast('↻ Lab restarted');
+}
 function labGoMission(i){ if(i<0||i>=MISSIONS.length) return; state.curMission=i; renderLab(); }
+function labMarkDone(){ var m=MISSIONS[state.curMission]; state.missionsDone[m.id]=!state.missionsDone[m.id]; save(); renderLab(); showToast(state.missionsDone[m.id]?'✓ Marked finished':'Marked not finished'); }
 function checkMissions(){
   var changed=false, justFinished=null;
   MISSIONS.forEach(function(m){
+    if(m.type==='manifest' || !m.check) return;   // manifest missions complete via Apply, not command history
     if(!state.missionsDone[m.id]){
       var ok=false; try{ ok=m.check(lab.history, lab.cluster); }catch(e){ ok=false; }
       if(ok){ state.missionsDone[m.id]=true; changed=true; if(m.id===MISSIONS[state.curMission].id) justFinished=m; }
@@ -2731,6 +3309,80 @@ function refreshMissionPanel(){
   var screen=lab.screen.slice();
   renderLab();
   lab.screen=screen; paintScreen();
+}
+
+/* ═══════════════ PROGRESSIVE HINTS (shared by both labs) ═══════════════ */
+var hintShown={};   // id -> how many hints revealed (runtime only)
+function revealHint(id,total){ hintShown[id]=Math.min((hintShown[id]||0)+1,total); if(state.view==='lab') renderLab(); else if(state.view==='python') renderPython(); }
+function hintBlock(id, hints){
+  if(!hints||!hints.length) return '';
+  var shown=Math.min(hintShown[id]||0, hints.length);
+  var h='<div class="hintbox">';
+  if(shown===0){
+    h+='<button class="btn btn-ghost btn-sm" onclick="revealHint(\''+id+'\','+hints.length+')">💡 Stuck? Reveal a hint</button>';
+  } else {
+    h+='<strong>Hints ('+shown+'/'+hints.length+')</strong>';
+    for(var i=0;i<shown;i++) h+='<div class="hint-reveal">'+(i+1)+'. '+hints[i]+'</div>';
+    if(shown<hints.length) h+='<div style="margin-top:.55rem"><button class="btn btn-ghost btn-sm" onclick="revealHint(\''+id+'\','+hints.length+')">Still stuck? Another hint →</button></div>';
+    else h+='<div class="hint-done">That\'s every hint — now give it a shot. You\'ve got this.</div>';
+  }
+  h+='</div>';
+  return h;
+}
+
+/* ═══════════════ MINI-YAML PARSER (for manifest missions) ═══════════════ */
+function yStripComment(ln){ var inS=false,inD=false; for(var i=0;i<ln.length;i++){var c=ln.charAt(i); if(c==="'"&&!inD)inS=!inS; else if(c==='"'&&!inS)inD=!inD; else if(c==='#'&&!inS&&!inD&&(i===0||/\s/.test(ln.charAt(i-1)))) return ln.slice(0,i);} return ln; }
+function yScalar(v){ v=v.trim(); if((v.charAt(0)==='"'&&v.slice(-1)==='"')||(v.charAt(0)==="'"&&v.slice(-1)==="'")) return v.slice(1,-1); if(/^-?\d+$/.test(v)) return parseInt(v,10); if(/^-?\d*\.\d+$/.test(v)) return parseFloat(v); if(v==='true')return true; if(v==='false')return false; if(v==='null'||v==='~')return null; return v; }
+function yamlParse(text){
+  var raw=String(text).replace(/\t/g,'  ').split('\n'); var lines=[];
+  for(var i=0;i<raw.length;i++){ var ln=yStripComment(raw[i]); if(/^\s*$/.test(ln)) continue;
+    if(/^\s*(---|\.\.\.)\s*$/.test(ln)){ if(lines.length) break; else continue; }
+    lines.push({indent:ln.match(/^ */)[0].length, text:ln.replace(/\s+$/,'').trim(), n:i+1}); }
+  if(!lines.length) throw new Error('the manifest is empty');
+  var pos={i:0}; return yNode(lines,pos,lines[0].indent);
+}
+function yNode(lines,pos,indent){ return lines[pos.i].text.charAt(0)==='-' ? yList(lines,pos,indent) : yMap(lines,pos,indent); }
+function yMap(lines,pos,indent){ var map={};
+  while(pos.i<lines.length){ var ln=lines[pos.i];
+    if(ln.indent<indent) break; if(ln.indent>indent) throw new Error('line '+ln.n+': unexpected indentation');
+    if(ln.text.charAt(0)==='-') break;
+    var m=ln.text.match(/^([^:]+):\s*(.*)$/); if(!m) throw new Error('line '+ln.n+': expected "key: value" but got "'+ln.text+'"');
+    var key=m[1].trim(), val=m[2]; pos.i++;
+    if(val===''){ if(pos.i<lines.length && lines[pos.i].indent>indent) map[key]=yNode(lines,pos,lines[pos.i].indent); else map[key]=null; }
+    else map[key]=yScalar(val);
+  } return map; }
+function yList(lines,pos,indent){ var arr=[];
+  while(pos.i<lines.length){ var ln=lines[pos.i];
+    if(ln.indent<indent) break; if(ln.indent>indent) throw new Error('line '+ln.n+': unexpected indentation');
+    if(ln.text.charAt(0)!=='-') break;
+    var rest=ln.text.replace(/^-\s*/,'');
+    if(rest===''){ pos.i++; if(pos.i<lines.length && lines[pos.i].indent>indent) arr.push(yNode(lines,pos,lines[pos.i].indent)); else arr.push(null); }
+    else if(/^[^:]+:(\s|$)/.test(rest)){ var contentIndent=indent+(ln.text.length-rest.length); lines[pos.i]={indent:contentIndent,text:rest,n:ln.n}; arr.push(yMap(lines,pos,contentIndent)); }
+    else { pos.i++; arr.push(yScalar(rest)); }
+  } return arr; }
+
+/* ═══════════════ MANIFEST MISSIONS (apply / edit YAML) ═══════════════ */
+var labManifestEdit={};   // missionId -> current editor text
+var lastManifestMsg={};   // missionId -> last result message (html)
+function labManifestOnEdit(){ var ed=document.getElementById('manifestEditor'); if(ed) labManifestEdit[MISSIONS[state.curMission].id]=ed.value; }
+function labResetManifest(){ var m=MISSIONS[state.curMission]; labManifestEdit[m.id]=m.manifest; lastManifestMsg[m.id]=''; renderLab(); }
+function applyManifest(){
+  var m=MISSIONS[state.curMission]; if(!m||m.type!=='manifest') return;
+  var ed=document.getElementById('manifestEditor'); var raw=ed?ed.value:''; labManifestEdit[m.id]=raw;
+  var out=document.getElementById('manifestOut'); if(!out) return;
+  var doc;
+  try{ doc=yamlParse(raw); }
+  catch(e){ out.className='manifest-out err'; out.innerHTML='✗ YAML error — '+escapeHtml(e.message)+'\n(check your indentation and that every key has a value)'; lastManifestMsg[m.id]=out.innerHTML; return; }
+  var res; try{ res=m.validate(doc, raw, lab.cluster); }catch(e2){ res={ok:false,msg:'couldn\'t read the manifest — '+escapeHtml(e2.message)}; }
+  if(res && res.ok){
+    if(m.apply){ try{ m.apply(doc, lab.cluster); }catch(e3){} }
+    var first=!state.missionsDone[m.id]; if(first){ state.missionsDone[m.id]=true; save(); }
+    out.className='manifest-out ok'; out.innerHTML='✓ '+(res.msg||'Applied — looks correct!'); lastManifestMsg[m.id]=out.innerHTML;
+    if(first) showToast('✓ Mission complete: '+m.title.replace(/<[^>]+>/g,''));
+    renderLab();
+  } else {
+    out.className='manifest-out err'; out.innerHTML='✗ '+((res&&res.msg)||'not quite — keep going'); lastManifestMsg[m.id]=out.innerHTML;
+  }
 }
 
 /* ═══════════════ PYTHON LAB (real execution via Pyodide) ═══════════════ */
@@ -2772,12 +3424,14 @@ function renderPython(){
     + (state.pyDone[ex.id]?'<span class="pill ok">✓ Passed</span>':'')+'</div>'
     + '<p class="lesson" style="border:none;padding:.6rem 0;background:none;font-size:.93rem;color:var(--subtle);line-height:1.7">'+ex.prompt+'</p>'
     + '<div class="eli5"><div class="eli5-lbl">🧒 How to think about it</div><p>'+ex.eli5+'</p></div>'
+    + hintBlock(ex.id, PY_HINTS[ex.id]||[])
     + '<div class="editor-wrap"><textarea class="editor" id="pyEditor" spellcheck="false" oninput="pyOnEdit()">'+escapeHtml(code)+'</textarea></div>'
     + '<div class="py-toolbar">'
     + '<button class="btn btn-primary btn-sm" onclick="pyRun()">▶ Run</button>'
     + '<button class="btn btn-ghost btn-sm" onclick="pyCheck()">✓ Check tests</button>'
     + '<button class="btn btn-ghost btn-sm" onclick="pyReset()">↺ Reset</button>'
     + '<button class="btn btn-ghost btn-sm" onclick="pyToggleSolution()">💡 Solution</button>'
+    + '<button class="btn '+(state.pyDone[ex.id]?'btn-ghost':'btn-primary')+' btn-sm" onclick="pyMarkDone()">'+(state.pyDone[ex.id]?'✓ Finished':'Mark finished')+'</button>'
     + '<span class="py-status" id="pyStatus">'+(pyodide?'✓ Python ready':(pyFailed?'⚠ offline — solutions only':'Loading Python…'))+'</span>'
     + '</div>'
     + '<div class="py-output" id="pyOutput">› output will appear here</div>'
@@ -2796,6 +3450,7 @@ function renderPython(){
 function pyOnEdit(){ var ed=document.getElementById('pyEditor'); if(ed) pyUserCode[PY_EX[state.curPy].id]=ed.value; }
 function pyGo(i){ if(i<0||i>=PY_EX.length) return; state.curPy=i; renderPython(); }
 function pyReset(){ var ex=PY_EX[state.curPy]; pyUserCode[ex.id]=ex.starter; renderPython(); }
+function pyMarkDone(){ var ex=PY_EX[state.curPy]; state.pyDone[ex.id]=!state.pyDone[ex.id]; save(); renderPython(); showToast(state.pyDone[ex.id]?'✓ Marked finished':'Marked not finished'); }
 function pyToggleSolution(){ var s=document.getElementById('pySolution'); if(s) s.style.display = s.style.display==='none'?'block':'none'; }
 function pyOut(text, cls){ var o=document.getElementById('pyOutput'); if(o){ o.innerHTML='<span class="'+(cls||'')+'">'+escapeHtml(text)+'</span>'; } }
 
@@ -2927,10 +3582,10 @@ function closeProgress(){ document.getElementById('progressOverlay').classList.r
 function collectProgress(){
   return { app:'sre-lab', version:1, savedAt:new Date().toISOString(),
     lessonsDone:state.lessonsDone, missionsDone:state.missionsDone,
-    pyDone:state.pyDone, planDone:state.planDone, curLesson:state.curLesson };
+    pyDone:state.pyDone, planDone:state.planDone, quizScores:state.quizScores, curLesson:state.curLesson };
 }
 function applyProgress(d){
-  ['lessonsDone','missionsDone','pyDone','planDone'].forEach(function(k){ if(d[k] && typeof d[k]==='object') state[k]=d[k]; });
+  ['lessonsDone','missionsDone','pyDone','planDone','quizScores'].forEach(function(k){ if(d[k] && typeof d[k]==='object') state[k]=d[k]; });
   if(d.curLesson) state.curLesson=d.curLesson;
 }
 
